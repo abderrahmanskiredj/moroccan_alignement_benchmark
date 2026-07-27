@@ -16,9 +16,11 @@ Repository accompanying the Moroccan Alignment Benchmark.
 - 9 cross-validation annotators
 - 3 disjoint LLM judges
 
-Detailed reproduction instructions will be added here.
 
 
+# Repository Structure
+
+```text
 moroccan-alignment-benchmark/
 │
 ├── README.md
@@ -164,3 +166,4 @@ moroccan-alignment-benchmark/
 │   └── test_judge_output_schema.py
 │
 └── reproduce_results.sh
+```
