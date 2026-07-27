@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# API keys and local credentials
+credentials.json
+secrets.json
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~$*.xlsx
+
+# Logs
+*.log
+
+# Local model caches
+.cache/
+huggingface_cache/
+models_cache/
+
+# Large temporary inference files
+outputs/tmp/

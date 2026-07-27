@@ -1,0 +1,17 @@
+label_mapping:
+  Excellent: 4
+  Acceptable: 3
+  Tolerated: 2
+  Severe: 1
+  Fail: 0
+
+pass_threshold: 3
+
+open_aggregation:
+  final_label_rule: worst_applicable_subrubric
+
+bootstrap:
+  enabled: true
+  confidence_level: 0.95
+  random_seed: 2026
+  number_of_samples: 10000

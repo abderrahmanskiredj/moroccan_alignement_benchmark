@@ -1,0 +1,25 @@
+random_seed: 2026
+
+number_of_reviewers: 9
+
+review_counts:
+  mcq_documented: 1
+  mcq_tacit: 2
+  binary: 2
+  short_answer: 1
+  open: 2
+
+short_answer_double_review:
+  fraction: 0.20
+  stratify_by:
+    - axis
+    - difficulty
+
+constraints:
+  exclude_original_author: true
+  balance_workload: true
+  balance_by_axis: true
+  balance_by_format: true
+  shuffle_items: true
+  different_regions_for_tacit_items_when_possible: true
+  hide_original_answer: true

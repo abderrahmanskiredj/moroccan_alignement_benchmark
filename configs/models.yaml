@@ -1,0 +1,1004 @@
+# =============================================================================
+# Moroccan Alignment Benchmark — evaluated model registry
+# =============================================================================
+#
+# Purpose
+# -------
+# This file defines the systems evaluated in the benchmark. It contains model
+# identifiers and inference metadata only. Experimental scores must remain in
+# outputs/final_results.xlsx and outputs/leaderboard.csv, not in this file.
+#
+# Important reproducibility rule
+# ------------------------------
+# For Hugging Face checkpoints, "revision: main" is allowed for the first
+# download only. The inference script must resolve and save the full immutable
+# commit SHA in every generation record and in the run manifest.
+#
+# API systems are configured using exact model IDs rather than moving aliases
+# wherever a stable/pinned identifier is available.
+#
+# Last externally verified: 2026-07-27
+# =============================================================================
+
+schema_version: "1.0"
+
+benchmark:
+  name: "The Moroccan Alignment Benchmark"
+  data_file: "data/02_final_benchmark/moroccan_alignment_benchmark.csv"
+  system_prompt_file: "prompts/system_prompt.txt"
+  output_directory: "outputs/generations"
+  run_manifest_file: "outputs/generations/run_manifest.json"
+  random_seed: 2026
+
+# -----------------------------------------------------------------------------
+# Shared inference policy
+# -----------------------------------------------------------------------------
+
+inference_defaults:
+  input_modality: "text"
+  use_chat_template: true
+  add_generation_prompt: true
+  continue_final_message: false
+
+  # Prevent external retrieval or tool use from contaminating the benchmark.
+  tools_enabled: false
+  web_search_enabled: false
+  search_grounding_enabled: false
+  code_execution_enabled: false
+  file_search_enabled: false
+  url_context_enabled: false
+
+  # Closed formats need only a short answer. Open questions receive a larger
+  # allowance. The inference script should select the value by question_type.
+  max_new_tokens_by_format:
+    MCQ: 32
+    Binary: 32
+    Short: 128
+    Open: 768
+
+  deterministic_decoding:
+    do_sample: false
+    temperature: 0.0
+    top_p: 1.0
+    top_k: null
+    repetition_penalty: 1.0
+
+  output_record:
+    save_rendered_prompt: true
+    save_raw_response: true
+    save_finish_reason: true
+    save_usage: true
+    save_latency: true
+    save_execution_timestamp_utc: true
+    save_provider_request_id: true
+    save_model_revision: true
+    save_generation_parameters: true
+    save_error_message: true
+
+reproducibility:
+  require_exact_model_id: true
+  require_resolved_huggingface_commit_sha: true
+  record_library_versions: true
+  record_cuda_version: true
+  record_gpu_name: true
+  record_quantization: true
+  record_tensor_parallel_size: true
+  record_api_execution_date: true
+  record_api_region_when_available: true
+  fail_on_unknown_model: true
+  fail_on_duplicate_model_key: true
+
+# -----------------------------------------------------------------------------
+# Provider configuration
+# -----------------------------------------------------------------------------
+
+providers:
+  openai:
+    backend: "openai_responses"
+    api_key_environment_variable: "OPENAI_API_KEY"
+    base_url_environment_variable: "OPENAI_BASE_URL"
+    default_base_url: "https://api.openai.com/v1"
+    timeout_seconds: 180
+    max_retries: 5
+
+  anthropic:
+    backend: "anthropic_messages"
+    api_key_environment_variable: "ANTHROPIC_API_KEY"
+    base_url_environment_variable: "ANTHROPIC_BASE_URL"
+    default_base_url: "https://api.anthropic.com"
+    timeout_seconds: 180
+    max_retries: 5
+
+  google:
+    backend: "google_genai"
+    api_key_environment_variable: "GEMINI_API_KEY"
+    timeout_seconds: 180
+    max_retries: 5
+
+  mistral:
+    backend: "mistral_chat"
+    api_key_environment_variable: "MISTRAL_API_KEY"
+    base_url_environment_variable: "MISTRAL_BASE_URL"
+    default_base_url: "https://api.mistral.ai/v1"
+    timeout_seconds: 180
+    max_retries: 5
+
+  huggingface:
+    backend: "vllm"
+    token_environment_variable: "HF_TOKEN"
+    cache_directory_environment_variable: "HF_HOME"
+    default_dtype: "bfloat16"
+    default_tensor_parallel_size: "auto"
+    default_gpu_memory_utilization: 0.90
+    default_max_model_length: null
+    default_trust_remote_code: false
+
+# =============================================================================
+# Evaluated systems
+# =============================================================================
+#
+# Field guide
+# -----------
+# key:
+#   Stable internal identifier used in filenames and scripts.
+#
+# paper.display_name:
+#   Name printed in the paper.
+#
+# paper.params_label:
+#   Parameter label currently intended for the paper table.
+#
+# paper.table_group:
+#   API reference or self-hosted group.
+#
+# model_id / checkpoint:
+#   Exact provider model ID or Hugging Face repository.
+#
+# revision:
+#   Hugging Face branch, tag, or commit. The full resolved SHA must be logged.
+#
+# request:
+#   Provider-specific parameters. Null values must not be sent to the API.
+#
+# corrections:
+#   Known differences between the abbreviated paper label and the exact public
+#   model identifier or metadata. Review these before finalizing the paper.
+# =============================================================================
+
+evaluated_models:
+
+  # ---------------------------------------------------------------------------
+  # API reference systems
+  # ---------------------------------------------------------------------------
+
+  - key: "gpt_5_class"
+    enabled: true
+    access: "api"
+    provider: "openai"
+    backend: "openai_responses"
+
+    paper:
+      display_name: "GPT-5-class"
+      params_label: "---"
+      table_group: "api_reference"
+
+    model_id: "gpt-5.6-sol"
+    model_alias: null
+    model_family: "GPT-5.6"
+    developer: "OpenAI"
+    parameters:
+      disclosed: false
+      architecture: "proprietary"
+
+    request:
+      reasoning_effort: "medium"
+      temperature: null
+      top_p: null
+      seed: null
+      max_output_tokens_from_format_defaults: true
+
+    output_file: "outputs/generations/gpt-5-class.jsonl"
+
+    corrections:
+      mapped_from_generic_paper_label: true
+      note: >
+        The paper uses a class label. This configuration maps it to the exact
+        current flagship endpoint gpt-5.6-sol. Replace the model_id if the
+        reported experiment used a different GPT-5-family endpoint.
+
+  - key: "claude_frontier"
+    enabled: true
+    access: "api"
+    provider: "anthropic"
+    backend: "anthropic_messages"
+
+    paper:
+      display_name: "Claude (frontier tier)"
+      params_label: "---"
+      table_group: "api_reference"
+
+    model_id: "claude-fable-5"
+    model_alias: null
+    model_family: "Claude 5"
+    developer: "Anthropic"
+    parameters:
+      disclosed: false
+      architecture: "proprietary"
+
+    request:
+      effort: "medium"
+      adaptive_thinking: true
+      temperature: null
+      top_p: null
+      max_tokens_from_format_defaults: true
+
+    response_handling:
+      accepted_stop_reasons:
+        - "end_turn"
+        - "max_tokens"
+        - "refusal"
+      treat_refusal_as_valid_model_output: true
+
+    output_file: "outputs/generations/claude-frontier-tier.jsonl"
+
+    corrections:
+      mapped_from_generic_paper_label: true
+      note: >
+        Claude Fable 5 is used as the exact frontier-tier endpoint. Replace the
+        model_id if the experiment used Claude Opus 5 or another Claude model.
+
+  - key: "gemini_frontier"
+    enabled: true
+    access: "api"
+    provider: "google"
+    backend: "google_genai"
+
+    paper:
+      display_name: "Gemini (frontier tier)"
+      params_label: "---"
+      table_group: "api_reference"
+
+    model_id: "gemini-3.5-flash"
+    model_alias: null
+    model_family: "Gemini 3.5"
+    developer: "Google"
+    parameters:
+      disclosed: false
+      architecture: "proprietary"
+
+    request:
+      thinking_level: "medium"
+      temperature: 0.0
+      top_p: 1.0
+      candidate_count: 1
+      max_output_tokens_from_format_defaults: true
+
+    safety_settings:
+      use_provider_defaults: true
+      overrides: []
+
+    output_file: "outputs/generations/gemini-frontier-tier.jsonl"
+
+    corrections:
+      mapped_from_generic_paper_label: true
+      note: >
+        Gemini 3.5 Flash is a stable frontier-level endpoint. Replace the
+        model_id if the experiment used Gemini 3.1 Pro Preview or another
+        endpoint. Never use a moving '*-latest' alias for a reported run.
+
+  - key: "gpt_4_class"
+    enabled: true
+    access: "api"
+    provider: "openai"
+    backend: "openai_responses"
+
+    paper:
+      display_name: "GPT-4-class"
+      params_label: "---"
+      table_group: "api_reference"
+
+    model_id: "gpt-4.1-2025-04-14"
+    model_alias: "gpt-4.1"
+    model_family: "GPT-4.1"
+    developer: "OpenAI"
+    parameters:
+      disclosed: false
+      architecture: "proprietary"
+
+    request:
+      temperature: 0.0
+      top_p: 1.0
+      seed: 2026
+      max_output_tokens_from_format_defaults: true
+
+    output_file: "outputs/generations/gpt-4-class.jsonl"
+
+    corrections:
+      mapped_from_generic_paper_label: true
+      note: >
+        The dated GPT-4.1 snapshot is used instead of the moving alias. If your
+        paper intends the older GPT-4 or GPT-4o family, change both the paper
+        label and the exact model_id.
+
+  - key: "mistral_large_2512"
+    enabled: true
+    access: "api"
+    provider: "mistral"
+    backend: "mistral_chat"
+
+    paper:
+      display_name: "mistral-large-2512"
+      params_label: "675B/41B"
+      table_group: "api_reference"
+
+    model_id: "mistral-large-2512"
+    model_family: "Mistral Large 3"
+    developer: "Mistral AI"
+    parameters:
+      disclosed: true
+      architecture: "mixture_of_experts"
+      total_billion: 675
+      active_billion: 41
+
+    weights:
+      available: true
+      self_hosted_checkpoint: "mistralai/Mistral-Large-3-675B-Instruct-2512"
+
+    request:
+      temperature: 0.0
+      top_p: 1.0
+      random_seed: 2026
+      max_tokens_from_format_defaults: true
+
+    output_file: "outputs/generations/mistral-large-2512.jsonl"
+
+    corrections:
+      table_group_warning: true
+      note: >
+        This system can be evaluated through the Mistral API, but its weights
+        and parameter counts are public. Therefore, the paper group heading
+        should not claim that every model in this section is API-only or has an
+        undisclosed size.
+
+  - key: "mistral_medium_3_5"
+    enabled: true
+    access: "api"
+    provider: "mistral"
+    backend: "mistral_chat"
+
+    paper:
+      display_name: "mistral-medium-3.5"
+      params_label: "128B"
+      table_group: "api_reference"
+
+    model_id: "mistral-medium-3-5"
+    model_family: "Mistral Medium 3.5"
+    developer: "Mistral AI"
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 128
+      active_billion: 128
+
+    weights:
+      available: true
+      self_hosted_checkpoint: null
+
+    request:
+      temperature: 0.0
+      top_p: 1.0
+      random_seed: 2026
+      max_tokens_from_format_defaults: true
+
+    output_file: "outputs/generations/mistral-medium-3-5.jsonl"
+
+    corrections:
+      exact_api_id_differs_from_display_name: true
+      table_group_warning: true
+      note: >
+        The exact API ID uses hyphens: mistral-medium-3-5. Its size is publicly
+        documented, so it should not be described as undisclosed.
+
+  # ---------------------------------------------------------------------------
+  # Open-weight, self-hosted systems
+  # ---------------------------------------------------------------------------
+
+  - key: "gemma_4_31b_it"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "google/gemma-4-31b-it"
+      params_label: "31B"
+      table_group: "self_hosted"
+
+    checkpoint: "google/gemma-4-31B-it"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Gemma 4"
+    developer: "Google"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 31
+      active_billion: 31
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/google-gemma-4-31b-it.jsonl"
+
+    corrections:
+      exact_checkpoint_case_sensitive: true
+      note: >
+        The exact repository uses uppercase B: google/gemma-4-31B-it.
+
+  - key: "atlas_chat_27b"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "MBZUAI-Paris/Atlas-Chat-27B"
+      params_label: "27B"
+      table_group: "self_hosted"
+
+    checkpoint: "MBZUAI-Paris/Atlas-Chat-27B"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Atlas-Chat"
+    developer: "MBZUAI Paris"
+    license: "gemma"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 27
+      active_billion: 27
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/atlas-chat-27b.jsonl"
+
+  - key: "gemma_4_26b_a4b_it"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "google/gemma-4-26b-a4b-it"
+      params_label: "26B/4B"
+      table_group: "self_hosted"
+
+    checkpoint: "google/gemma-4-26B-A4B-it"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Gemma 4"
+    developer: "Google"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "mixture_of_experts"
+      total_billion: 26
+      active_billion: 4
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/google-gemma-4-26b-a4b-it.jsonl"
+
+    corrections:
+      exact_checkpoint_case_sensitive: true
+      note: >
+        The exact repository uses uppercase B and A4B:
+        google/gemma-4-26B-A4B-it.
+
+  - key: "qwen_3_6_27b"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "Qwen/Qwen3.6-27B"
+      params_label: "27B"
+      table_group: "self_hosted"
+
+    checkpoint: "Qwen/Qwen3.6-27B"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Qwen 3.6"
+    developer: "Qwen"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 27
+      active_billion: 27
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: false
+      preserve_thinking_history: false
+
+    output_file: "outputs/generations/qwen3-6-27b.jsonl"
+
+    notes:
+      - >
+        The benchmark configuration disables explicit thinking output so that
+        only the final answer is scored and stored.
+
+  - key: "gemmaroc_27b"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "GemMaroc-27B"
+      params_label: "27B"
+      table_group: "self_hosted"
+
+    checkpoint: "GemMaroc/GemMaroc-27b-it"
+    alternate_checkpoint: "AbderrahmanSkiredj1/GemMaroc-27b-it"
+    revision: "main"
+    resolved_revision: null
+    model_family: "GemMaroc"
+    base_model: "google/gemma-3-27b"
+    developer: "GemMaroc"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 27
+      active_billion: 27
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/gemmaroc-27b-it.jsonl"
+
+    corrections:
+      paper_label_is_not_runnable_id: true
+      note: >
+        GemMaroc-27B is the paper-facing name. The runnable repository is
+        GemMaroc/GemMaroc-27b-it.
+
+  - key: "mistral_small_2603"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "mistralai/Mistral-Small-2603"
+      recommended_display_name: "mistralai/Mistral-Small-4-119B-2603"
+      params_label: "119B/6.5B"
+      table_group: "self_hosted"
+
+    checkpoint: "mistralai/Mistral-Small-4-119B-2603"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Mistral Small 4"
+    developer: "Mistral AI"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "mixture_of_experts"
+      total_billion: 119
+      active_billion: 6.5
+
+    loader:
+      dtype: "auto"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "mistral"
+      config_format: "mistral"
+      load_format: "mistral"
+      minimum_vllm_version: null
+      minimum_mistral_common_version: null
+
+    chat_template:
+      source: "checkpoint"
+      reasoning_mode: "disabled"
+
+    output_file: "outputs/generations/mistral-small-4-119b-2603.jsonl"
+
+    corrections:
+      critical_table_correction: true
+      note: >
+        No official 24B checkpoint named mistralai/Mistral-Small-2603 was
+        verified. The official 2603 release is Mistral Small 4 with 119B total
+        and 6.5B active parameters. If you intended a dense 24B model, use a
+        different checkpoint such as a Mistral Small 3.x release and change the
+        paper label accordingly.
+
+  - key: "qwen_3_5_9b"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "Qwen/Qwen3.5-9B"
+      params_label: "9B"
+      table_group: "self_hosted"
+
+    checkpoint: "Qwen/Qwen3.5-9B"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Qwen 3.5"
+    developer: "Qwen"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      marketed_billion: 9
+      active_billion: 9
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: false
+
+    output_file: "outputs/generations/qwen3-5-9b.jsonl"
+
+  - key: "command_r7b_arabic"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "CohereLabs/c4ai-command-r7b-arabic"
+      recommended_display_name: "CohereLabs/c4ai-command-r7b-arabic-02-2025"
+      params_label: "7B"
+      table_group: "self_hosted"
+
+    checkpoint: "CohereLabs/c4ai-command-r7b-arabic-02-2025"
+    revision: "main"
+    resolved_revision: null
+    model_family: "C4AI Command R7B Arabic"
+    developer: "Cohere Labs"
+    license: "cc-by-nc-4.0"
+    gated: true
+    requires_hf_token: true
+    requires_license_acceptance: true
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      transformer_billion: 7
+      embedding_billion: 1
+      approximate_total_billion: 8
+      active_billion: 8
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/c4ai-command-r7b-arabic-02-2025.jsonl"
+
+    corrections:
+      exact_checkpoint_suffix_missing_in_paper: true
+      parameter_label_is_simplified: true
+      note: >
+        The runnable checkpoint includes the -02-2025 suffix. The model card
+        describes approximately 8B total parameters: 7B transformer parameters
+        plus about 1B embedding parameters. The paper's 7B label refers to the
+        transformer core.
+
+  - key: "ministral_14b_2512"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "mistralai/Ministral-14B-2512"
+      recommended_display_name: "mistralai/Ministral-3-14B-Instruct-2512"
+      params_label: "14B"
+      table_group: "self_hosted"
+
+    checkpoint: "mistralai/Ministral-3-14B-Instruct-2512"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Ministral 3"
+    developer: "Mistral AI"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      language_model_billion: 14
+      active_billion: 14
+
+    loader:
+      dtype: "auto"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "mistral"
+      config_format: "mistral"
+      load_format: "mistral"
+      minimum_vllm_version: "0.12.0"
+      minimum_mistral_common_version: "1.8.6"
+
+    chat_template:
+      source: "checkpoint"
+      reasoning_mode: "disabled"
+
+    output_file: "outputs/generations/ministral-3-14b-instruct-2512.jsonl"
+
+    corrections:
+      exact_checkpoint_name_differs_from_paper: true
+      note: >
+        The exact self-hosted instruct checkpoint is
+        mistralai/Ministral-3-14B-Instruct-2512.
+
+  - key: "ministral_8b_2512"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "mistralai/Ministral-8B-2512"
+      recommended_display_name: "mistralai/Ministral-3-8B-Instruct-2512"
+      params_label: "8B"
+      table_group: "self_hosted"
+
+    checkpoint: "mistralai/Ministral-3-8B-Instruct-2512"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Ministral 3"
+    developer: "Mistral AI"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      language_model_billion: 8.4
+      vision_encoder_billion: 0.4
+      approximate_total_billion: 8.8
+      paper_rounded_billion: 8
+      active_billion: 8.4
+
+    loader:
+      dtype: "auto"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "mistral"
+      config_format: "mistral"
+      load_format: "mistral"
+      minimum_vllm_version: "0.12.0"
+      minimum_mistral_common_version: "1.8.6"
+
+    chat_template:
+      source: "checkpoint"
+      reasoning_mode: "disabled"
+
+    output_file: "outputs/generations/ministral-3-8b-instruct-2512.jsonl"
+
+    corrections:
+      exact_checkpoint_name_differs_from_paper: true
+      parameter_label_is_rounded: true
+      note: >
+        The exact checkpoint is mistralai/Ministral-3-8B-Instruct-2512. Its
+        model card describes an 8.4B language model and a 0.4B vision encoder;
+        the paper label 8B is a rounded family name.
+
+  - key: "allam_7b_instruct"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "humain-ai/ALLaM-7B-Instruct"
+      recommended_display_name: "humain-ai/ALLaM-7B-Instruct-preview"
+      params_label: "7B"
+      table_group: "self_hosted"
+
+    checkpoint: "humain-ai/ALLaM-7B-Instruct-preview"
+    revision: "v2"
+    resolved_revision: null
+    model_family: "ALLaM"
+    developer: "SDAIA / NCAI; hosted under humain-ai"
+    license: "apache-2.0"
+    gated: false
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 7
+      active_billion: 7
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+
+    chat_template:
+      source: "checkpoint"
+      system_prompt_policy: "benchmark_system_prompt"
+      enable_thinking: null
+
+    output_file: "outputs/generations/allam-7b-instruct-preview-v2.jsonl"
+
+    corrections:
+      preview_suffix_missing_in_paper: true
+      pinned_revision_available: true
+      note: >
+        The public repository is humain-ai/ALLaM-7B-Instruct-preview. Revision
+        v2 is selected because the model card identifies it as the newest
+        published model revision.
+
+  - key: "jais_2_8b_chat"
+    enabled: true
+    access: "open_weights"
+    provider: "huggingface"
+    backend: "vllm"
+
+    paper:
+      display_name: "inceptionai/Jais-2-8B-Chat"
+      params_label: "8B"
+      table_group: "self_hosted"
+
+    checkpoint: "inceptionai/Jais-2-8B-Chat"
+    revision: "main"
+    resolved_revision: null
+    model_family: "Jais 2"
+    developer: "Inception, MBZUAI, and Cerebras"
+    license: "apache-2.0"
+    gated: true
+    requires_hf_token: true
+    requires_license_acceptance: true
+
+    parameters:
+      disclosed: true
+      architecture: "dense"
+      total_billion: 8
+      active_billion: 8
+
+    loader:
+      dtype: "bfloat16"
+      tensor_parallel_size: "auto"
+      trust_remote_code: false
+      task: "generate"
+      tokenizer_mode: "auto"
+      transformers_requirement: "latest compatible release or documented fork"
+
+    chat_template:
+      source: "checkpoint"
+      enable_thinking: null
+
+    output_file: "outputs/generations/jais-2-8b-chat.jsonl"
+
+# -----------------------------------------------------------------------------
+# Human reference — metadata only, never passed to the inference runner
+# -----------------------------------------------------------------------------
+
+non_model_references:
+  human_ceiling:
+    enabled_for_inference: false
+    paper_display_name: "Human ceiling"
+    source: "benchmark_annotation_and_validation"
+    expected_results_location: "outputs/final_results.xlsx"
+
+# -----------------------------------------------------------------------------
+# Validation rules expected from scripts/04_run_inference.py
+# -----------------------------------------------------------------------------
+
+validation:
+  required_model_fields:
+    - "key"
+    - "enabled"
+    - "access"
+    - "provider"
+    - "backend"
+    - "paper"
+    - "output_file"
+
+  allowed_access_values:
+    - "api"
+    - "open_weights"
+
+  allowed_backends:
+    - "openai_responses"
+    - "anthropic_messages"
+    - "google_genai"
+    - "mistral_chat"
+    - "vllm"
+
+  api_models_must_define:
+    - "model_id"
+
+  open_weight_models_must_define:
+    - "checkpoint"
+    - "revision"
+    - "loader"
+
+  prohibit_moving_api_aliases:
+    - "*-latest"
+
+  require_output_filename_uniqueness: true
+  require_full_revision_in_run_manifest: true
+  require_tools_disabled: true
