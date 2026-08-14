@@ -45,3 +45,4 @@ models_cache/
 
 # Large temporary inference files
 outputs/tmp/
+outputs/
