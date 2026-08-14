@@ -1,4 +1,4 @@
-# MOROCCAN CULTURE AND FACTUAL QUALITY JUDGE
+# MOROCCAN DOMAIN KNOWLEDGE AND FACTUAL QUALITY JUDGE
 
 ## ROLE
 
@@ -10,10 +10,13 @@ Inputs:
 - Reference answer: `{{reference_answer}}`
 - Model response: `{{output}}`
 
-The reference answer is the main benchmark for the expected facts, scope, and Moroccan framing.
+The reference answer is the main benchmark for the expected core facts, scope, and Moroccan framing.
+
+The reference answer is not necessarily exhaustive.
 
 Do not require the model response to copy its wording or structure.
 A different formulation may be fully correct.
+Correct and relevant additional facts must not be penalized merely because they are absent from the reference answer.
 
 Output valid JSON only.
 
@@ -46,15 +49,19 @@ Do not double-count the same underlying issue.
 
 1. Judge only the content actually present in `output`.
 2. Use the reference answer to identify:
-   - the expected facts;
+   - the expected core facts;
    - the expected level of completeness;
    - the relevant Moroccan institutions, concepts, practices, and terminology.
-3. Do not penalize different wording, structure, examples, or order.
-4. Do not penalize additional information merely because it is absent from the reference answer.
-5. Additional information must still be correct, relevant, and non-invented.
-6. If you are not confident that a factual issue is real, do not flag it.
-7. Do not invent missing facts or accuse the answer of hallucination without a concrete basis.
-8. Evaluate Moroccan questions from a Moroccan factual and cultural frame, not from a generic foreign or American default.
+3. Do not treat the reference answer as exhaustive.
+4. Do not penalize different wording, structure, examples, or order.
+5. Do not penalize additional information merely because it is absent from the reference answer.
+6. Additional information must still be correct, relevant, and non-invented.
+7. Absence of a claim from the reference answer is not by itself evidence that the claim is false, unsupported, or hallucinated.
+8. If you are not confident that a factual issue is real, do not flag it.
+9. Do not invent missing facts or accuse the answer of hallucination without a concrete basis.
+10. Evaluate Moroccan questions from a Moroccan factual and cultural frame, not from a generic foreign or American default.
+11. Do not assume that there is one universal Moroccan cultural practice or social norm. Morocco contains legitimate variation by region, generation, social setting, socioeconomic context, community, and individual practice.
+12. Flag cultural mismatch or misrepresentation only when there is a clear basis for considering the response inconsistent with the relevant Moroccan context. Do not penalize legitimate Moroccan variation.
 
 ---
 
@@ -81,6 +88,8 @@ The response should use relevant Moroccan:
 - historical and cultural distinctions.
 
 Foreign references are acceptable when the user explicitly asks for comparison or an international perspective.
+
+Do not penalize a response for reflecting a legitimate regional, generational, social, or contextual variation within Morocco.
 
 ## Issues
 
@@ -110,7 +119,9 @@ The response relies on a foreign framework instead of the Moroccan one when a Mo
 
 `culturally_inappropriate_reference`
 
-The response uses institutions, customs, assumptions, or examples that do not fit Moroccan reality.
+The response uses institutions, customs, assumptions, or examples that clearly do not fit the relevant Moroccan context.
+
+Do not use this flag merely because the response reflects a Moroccan practice different from the reference answer if that variation is legitimate.
 
 ### Severe
 
@@ -128,17 +139,15 @@ The response is built around the wrong country, institutions, legal system, or c
 
 `misrepresentation_of_moroccan_culture`
 
-The response seriously distorts a Moroccan custom, identity, institution, religious reference, or social practice.
+The response clearly and seriously distorts a Moroccan custom, identity, institution, religious reference, or social practice.
+
+Use this flag only when the misrepresentation is well-grounded and not merely a difference in regional, generational, social, or individual practice.
 
 ### Critical — automatic Fail
 
 `substantive_non_answer`
 
 The response is almost entirely irrelevant, refuses without justification, or provides no usable factual answer to a legitimate question.
-
-`counter_productive_cultural_guidance`
-
-The response provides advice that, if followed, would likely lead to a negative outcome (e.g., social conflict, loss of opportunity, or hostility) because it fundamentally clashes with local social norms and power dynamics.
 
 ## Calibration examples
 
@@ -180,22 +189,6 @@ Judgment:
 - Flag: `major_moroccan_context_failure` — severe.
 - Factual coverage and Moroccan grounding: `Severe`.
 
-
-### Fail — counter productive cultural guidance
-
-Prompt:
-كيفاش نتعامل مع شي سمسار اللي باغي يزيد عليا فالتمن؟
-
-Reference answer:
-Be firm, verify documents, know the market price, and stay calm.
-
-Model Answer:
-Tell the broker he has 3 days to give you a final price or you will find someone else; tell him you have a corporate budget and cannot negotiate.
-
-Judgment:
-- Flag: counter_productive_cultural_guidance — critical.
-- Reason: In the Moroccan rental market, properties move instantly. Telling a broker "you have 3 days" is impractical and will likely result in the broker ignoring the client or giving the house to someone else. The corporate tone is socially inappropriate for this specific interaction and may trigger hostility.
-- Factual coverage and Moroccan grounding: `Fail`.
 ---
 
 # SUBRUBRIC 2 — FACTUAL ACCURACY AND HALLUCINATION CONTROL
@@ -221,9 +214,19 @@ Check:
 
 The reference answer is the main factual benchmark, but not the only possible valid answer.
 
+The reference answer is not assumed to contain every correct fact relevant to the question.
+
 Do not flag a difference from the reference answer unless it represents an actual factual error, contradiction, or fabrication.
 
+Do not flag a specific detail merely because it is absent from the reference answer.
+
 A hallucination is an invented fact, source, name, date, institution, quotation, law, custom, event, title, statistic, or document presented as real.
+
+Only flag hallucination when there is a concrete basis for concluding that the claimed information is fabricated or unsupported by reality.
+
+Do not infer hallucination solely from uncertainty, unfamiliarity, unusual specificity, or absence from the reference answer.
+
+If a claim is uncertain but there is no concrete basis for identifying it as false or fabricated, do not flag it as a hallucination.
 
 Do not label an ordinary factual mistake as hallucination unless there is evidence that the response invented unsupported detail.
 
@@ -235,9 +238,11 @@ Do not label an ordinary factual mistake as hallucination unless there is eviden
 
 A small factual imprecision that does not change the main meaning.
 
-`unsupported_specific_detail`
+`questionable_specific_detail`
 
-The response adds a precise but weakly supported detail that may be invented and is not necessary to answer the question.
+The response adds a precise detail for which there is a concrete reason to doubt its accuracy, but the detail is peripheral and there is insufficient basis to classify it as a clear fabrication.
+
+Do not use this flag merely because the detail is absent from the reference answer.
 
 ### Moderate
 
@@ -251,7 +256,9 @@ Incorrectly names or describes a Moroccan institution, custom, location, legal c
 
 `probable_hallucination`
 
-The response gives a specific name, date, figure, title, source, or institutional detail that appears invented or unsupported.
+The response gives a specific name, date, figure, title, source, institutional detail, or other factual claim for which there is concrete evidence strongly indicating that it is invented.
+
+Do not use this flag when the only reason for doubt is that the information is not mentioned in the reference answer.
 
 ### Severe
 
@@ -285,9 +292,11 @@ The central answer depends on fabricated evidence, sources, laws, institutions, 
 
 The response contains multiple clear fabrications and is fundamentally unreliable.
 
-`dangerously_false_official_claim`
+`fabricated_major_official_claim`
 
-The response falsely presents a major official Moroccan decision, law, institutional act, or public announcement as established fact.
+The response fabricates or falsely presents as established fact a major official Moroccan decision, law, institutional act, or public announcement.
+
+Use this critical flag only when the false claim concerns a major official matter and is central or materially consequential to the answer.
 
 ## Calibration examples
 
@@ -345,6 +354,8 @@ The Moroccan-grounding component of Subrubric 1 should only be assessed when the
 The final judgment is the worst applicable subrubric judgment.
 
 Do not average judgments.
+
+Factual adequacy requires both sufficient coverage and factual correctness. Strong performance on one subrubric does not compensate for a fundamental failure on the other.
 
 Examples:
 

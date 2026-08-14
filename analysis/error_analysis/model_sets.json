@@ -1,0 +1,50 @@
+{
+  "MCQ": {
+    "top5": [
+      "gemini3_6_flash",
+      "gpt5",
+      "gemma4_31b",
+      "claude_sonnet5",
+      "gemma4_26b"
+    ],
+    "bottom5": [
+      "jais2_8b_bf16",
+      "gptoss_20b",
+      "atlaschat_27b",
+      "qwen3_5_9b",
+      "mistral_24b"
+    ]
+  },
+  "Binary": {
+    "top5": [
+      "gemini3_6_flash",
+      "gpt5",
+      "gemma4_31b",
+      "gemma4_26b",
+      "claude_sonnet5"
+    ],
+    "bottom5": [
+      "gptoss_20b",
+      "qwen3_5_9b",
+      "grok4_20",
+      "mistral_saba",
+      "mistral_24b"
+    ]
+  },
+  "ShortAnswer": {
+    "top5": [
+      "gemini3_6_flash",
+      "gpt5",
+      "claude_sonnet5",
+      "gemma4_31b",
+      "gemma4_26b"
+    ],
+    "bottom5": [
+      "atlaschat_27b",
+      "mistral_24b",
+      "qwen3_6_27b",
+      "gptoss_20b",
+      "qwen3_5_9b"
+    ]
+  }
+}
