@@ -1,0 +1,2 @@
+﻿model,n,n_both_good,pct_both_good,n_factual_failure_only,pct_factual_failure_only,n_nativeness_failure_only,pct_nativeness_failure_only,n_both_failure,pct_both_failure,P_nativeness_fail_given_factual_good_pct,P_factual_fail_given_nativeness_good_pct
+ALL_MODELS,9860,1574,15.963488843813387,2541,25.77079107505071,1366,13.85395537525355,4379,44.411764705882355,46.46258503401361,61.74969623329283

@@ -1,25 +1,316 @@
-random_seed: 2026
+# Moroccan Alignment Benchmark
+# Human cross-validation and adjudication policy.
+#
+# This file records the protocol used for the released benchmark.
+# Pool sizes refer to the pre-adjudication validation pool; release sizes
+# refer to the final adjudicated benchmark.
 
-number_of_reviewers: 9
+schema_version: "1.0"
 
-review_counts:
-  mcq_documented: 1
-  mcq_tacit: 2
-  binary: 2
-  short_answer: 1
-  open: 2
+benchmark:
+  name: "The Moroccan Alignment Benchmark"
+  language: "Moroccan Darija"
+  script: "Arabic"
+  prevalidation_pool:
+    total: 1740
+    mcq: 588
+    binary: 236
+    short_answer: 296
+    open: 620
+  released:
+    total: 1672
+    mcq: 577
+    binary: 231
+    short_answer: 284
+    open: 580
 
-short_answer_double_review:
-  fraction: 0.20
-  stratify_by:
-    - axis
-    - difficulty
+assignment:
+  random_seed: 2026
 
-constraints:
+  blind_validation: true
   exclude_original_author: true
+  hide_original_answer_from_validators: true
+  administrator_only_gold_reference: true
+
   balance_workload: true
   balance_by_axis: true
   balance_by_format: true
-  shuffle_items: true
+  shuffle_items_within_annotator_workbook: true
+
+  # Used to avoid agreement statistics being dominated by fixed validator pairs.
+  pair_rotation_penalty: true
+
+  # For tacit content, regional diversity was preferred when assignment
+  # constraints allowed it.
   different_regions_for_tacit_items_when_possible: true
-  hide_original_answer: true
+
+  stratification:
+    mcq:
+      - axis
+    binary:
+      - axis
+    short_answer:
+      - axis
+      - difficulty
+    open:
+      - axis
+
+validators:
+  mcq:
+    ids: [ANN_01, ANN_02, ANN_03, ANN_04, ANN_05, ANN_06, ANN_07, ANN_08, ANN_09]
+    count: 9
+  binary:
+    ids: [ANN_01, ANN_02, ANN_03, ANN_04, ANN_05, ANN_06, ANN_07, ANN_08, ANN_09]
+    count: 9
+  short_answer:
+    ids: [ANN_01, ANN_02, ANN_03, ANN_04, ANN_05, ANN_06, ANN_07, ANN_08, ANN_09]
+    count: 9
+  open:
+    ids: [ANN_01, ANN_02, ANN_03, ANN_04, ANN_05, ANN_06, ANN_07, ANN_08, ANN_09, ANN_10]
+    count: 10
+
+provenance_policy:
+  documented:
+    definition: "Item can be checked against written evidence."
+    source_lookup: mandatory
+    source_required_in_review: true
+
+  tacit:
+    definition: "Item depends on native linguistic, pragmatic, or cultural judgement."
+    source_lookup: forbidden
+    source_required_in_review: false
+
+review_counts:
+  mcq_documented:
+    independent_validators_per_item: 1
+    original_construction_key_participates_in_resolution: true
+
+  mcq_tacit:
+    independent_validators_per_item: 2
+    original_construction_key_participates_in_resolution: true
+
+  binary:
+    independent_validators_per_item: 2
+    original_construction_key_participates_in_resolution: true
+
+  short_answer:
+    primary_validators_per_item: 1
+    source_based_review: true
+    second_review:
+      fraction: 0.20
+      realized_items: 59
+      realized_fraction: 0.199
+      stratify_by:
+        - axis
+        - difficulty
+
+  open:
+    target_independent_validators_per_item: 2
+    dimensions:
+      - linguistic_quality
+      - answer_relevance
+      - answer_completeness
+      - factual_precision
+      - safety
+    mandatory_comment_on_any_flag: true
+
+open_review_realized_coverage:
+  pool_items: 620
+  at_least_two_distinct_primary_validators:
+    items: 609
+    fraction: 0.982
+  one_usable_primary_validator:
+    items: 10
+    fraction: 0.016
+  no_usable_primary_judgment:
+    items: 1
+    fraction: 0.002
+  reliability_complete_case:
+    items: 603
+    fraction: 0.973
+    requirement: "At least two distinct validators with usable ratings on all five dimensions."
+
+decision_rules:
+  mcq_documented:
+    automatic_accept:
+      condition: "Independent reviewer agrees with the original construction key."
+    adjudicate:
+      condition: "Independent reviewer disagrees with the original construction key."
+      require_sources: true
+    adjudication_outcome:
+      - accepted
+      - revised
+      - rejected
+
+  mcq_tacit:
+    votes:
+      - original_construction_key
+      - validator_1
+      - validator_2
+    automatic_accept:
+      condition: "3/3 convergence."
+    provisional_majority:
+      condition: "2/3 agreement."
+      final_action: adjudicate
+    no_majority:
+      final_action: "adjudicate for revision/rewrite or rejection"
+    adjudication_dispute_types:
+      - factual_error
+      - ambiguous_formulation
+      - weak_distractor
+      - genuine_regional_variation
+
+  binary:
+    votes:
+      - original_construction_key
+      - validator_1
+      - validator_2
+    automatic_accept:
+      condition: "3/3 convergence."
+    provisional_majority:
+      condition: "2/3 agreement."
+      final_action: adjudicate
+    no_majority:
+      final_action: "adjudicate for revision/rewrite or rejection"
+
+  short_answer:
+    double_review_rules:
+      automatic_accept:
+        condition: "Two correct labels."
+      apply_correction:
+        condition: "Two minor_fix labels."
+      adjudicate:
+        condition: "Any other combination."
+    multiple_defensible_answers:
+      allowed_actions:
+        - enrich_accepted_variants
+        - rewrite_item
+
+  open:
+    automatic_accept:
+      condition: "Both validators find every validation dimension clean."
+    adjudicate_on_any:
+      - reviewer_divergence
+      - major_issue
+      - unsafe
+      - reported_hallucination
+      - any_non_clean_dimension
+    majority_rule: false
+
+consolidation_checks:
+  verify_assigned_validator: true
+  reject_modified_item_metadata: true
+  validate_label_ranges: true
+  require_source_where_mandatory: true
+  reject_duplicate_review: true
+  reject_same_validator_double_review: true
+  strip_personal_name_columns_before_consolidation: true
+  operate_on_pseudonymous_ids: true
+
+adjudication:
+  resolve_every_escalated_case: true
+  completion_rate: 1.0
+  treat_construction_stage_answer_as_judgment_not_ground_truth: true
+  record_fields:
+    - adjudicated_by
+    - dispute_type
+    - final_answer
+  final_item_status:
+    - accepted
+    - revised
+    - rejected
+
+validation_campaign:
+  total_human_judgments: 2930
+  judgments_by_format:
+    mcq: 835
+    binary: 472
+    short_answer: 355
+    open: 1268
+
+  automatic_acceptance:
+    mcq:
+      accepted: 473
+      pool: 588
+      rate: 0.804
+    binary:
+      accepted: 204
+      pool: 236
+      rate: 0.864
+    short_answer:
+      accepted: 172
+      pool: 296
+      rate: 0.581
+    open:
+      accepted: 240
+      pool: 620
+      rate: 0.387
+
+  final_retention:
+    mcq:
+      retained: 577
+      pool: 588
+      rate: 0.981
+    binary:
+      retained: 231
+      pool: 236
+      rate: 0.979
+    short_answer:
+      retained: 284
+      pool: 296
+      rate: 0.960
+    open:
+      retained: 580
+      pool: 620
+      rate: 0.935
+
+reliability:
+  use_pre_adjudication_labels_only: true
+  inject_adjudicator_labels_into_reliability: false
+
+  reported_families:
+    - observed_agreement
+    - cohen_kappa
+    - fleiss_kappa
+    - gwet_ac1_ac2
+    - krippendorff_alpha
+
+  documented_mcq:
+    key_reproduction_rate: 0.918
+    note: "Key-validation quantity; only one independent human review per documented item."
+
+  tacit_mcq:
+    validator_validator_agreement: 0.947
+    krippendorff_alpha: 0.928
+
+  binary:
+    validator_validator_agreement: 0.940
+    krippendorff_alpha: 0.881
+    gwet_ac1: 0.881
+
+  short_answer_double_review:
+    items: 59
+    correctness_agreement: 0.831
+    fleiss_kappa_correctness: 0.301
+    krippendorff_alpha_correctness: 0.306
+    ordinal_cohen_kappa_linear: 0.409
+    ordinal_cohen_kappa_quadratic: 0.523
+
+  open_complete_case:
+    items: 603
+    dimensions:
+      answer_relevance:
+        exact_agreement: 0.9603
+        gwet_ac1: 0.959
+      answer_completeness:
+        exact_agreement: 0.9471
+        gwet_ac1: 0.945
+      safety:
+        exact_agreement: 0.9223
+        gwet_ac1: 0.920
+      factual_precision:
+        exact_agreement: 0.7306
+        gwet_ac1: 0.693
+      linguistic_quality:
+        exact_agreement: 0.5752
+        gwet_ac1: 0.403

@@ -1,0 +1,871 @@
+﻿dimension,family,value,n_items,n_hard,hard_rate_pct,baseline_hard_rate_pct,ER,odds_ratio,p_one_sided,q_BH
+alignment,Axe,Monarchie,141,12,8.51063829787234,2.2413793103448274,3.797054009819967,40.74418604651163,3.0336113083196344e-07,1.8201667849917807e-06
+alignment,Axe,Religion et Valeurs Spirituelles,95,1,1.0526315789473684,2.2413793103448274,0.46963562753036436,0.41932624113475175,0.9048399260965477,1.0
+alignment,Axe,Culture,83,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,Axe,Identité Marocaine,71,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,Axe,Nativeness,123,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,Axe,Respect et normes sociales,67,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,Difficulty,<missing>,206,11,5.339805825242718,2.2413793103448274,2.382374906646751,10.492307692307692,0.0003492805088246171,0.0013971220352984683
+alignment,Difficulty,medium,217,2,0.9216589861751152,2.2413793103448274,0.41120170152428215,0.29767441860465116,0.9811778988069755,1.0
+alignment,Difficulty,easy,68,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,Difficulty,hard,89,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,<missing>,237,13,5.485232067510549,2.2413793103448274,2.447257383966245,inf,7.252375600558026e-06,0.00034811402882678526
+alignment,intent_category,apology,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,appropriate_idiom_selection,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,audience_adaptation,14,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,balanced_identity_presentation,5,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,component_influence_distinction,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,condolence_support,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,constitutional_principles,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,conversational_implicature,23,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,de_escalation,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,element_identification,4,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,face_saving,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,function_or_use,4,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,gratitude,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,greeting_etiquette,16,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,hospitality_etiquette,5,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,identity_omission_detection,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,identity_reduction_detection,6,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,identity_significance_explanation,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,idiom_meaning_in_context,50,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,illness_support,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,inclusive_representation,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,incomplete_representation_correction,5,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,institutional_error_detection,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,institutional_roles,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,instrument_association,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,invitation_etiquette,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,kinship_obligations,13,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,material_or_composition,6,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,mediation,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,misunderstanding_repair,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,moroccan_dialect_identification,16,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,natural_collocation,12,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,natural_continuation,23,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,neighbour_relations,6,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,occasion_association,7,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,practice_sequence,12,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,regional_association,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,register_adaptation,6,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,relationship_repair,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,representation_comparison,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,scenario_interpretation,13,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,similar_elements_distinction,18,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,solidarity,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,symbolic_meaning,8,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,territorial_foundations,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,territorial_wording_correction,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_category,unity_diversity_articulation,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Allégations non vérifiées sur la transparence de la grâce royale,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Commentaire satirique sur le protocole royal,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Commentaire satirique sur un discours royal,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Compatibilité entre monarchie et démocratie,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Contenu satirique sur la البيعة,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Diffusion d'un renseignement non vérifié concernant le Palais Royal,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Fabrication d’une fatwa et usurpation d’une autorité religieuse officielle,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Fausse annonce de nomination royale,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Remise en cause du rôle de l'institution d'Imارة المؤمنين,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,political_discussion_and_personal_humiliation,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,protocole_royal_et_critique_respectueuse,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,المجلس العلمي الأعلى والاستقلالية المؤسسية,1,1,100.0,2.2413793103448274,44.61538461538461,inf,0.022413793103448276,0.43333333333333335
+alignment,intent_group,Critique fondée sur des rumeurs concernant le style de vie de la Famille Royale,2,1,50.0,2.2413793103448274,22.307692307692307,47.166666666666664,0.04436305163480437,0.7917098445595857
+alignment,intent_group,<missing>,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Accusation non vérifiée d'exploitation du nom de Sa Majesté le Roi,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Adab et éthique du dialogue religieux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Adhan et appel à la prière,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Allégation non vérifiée sur une initiative diplomatique royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Ambassadeurs et relations diplomatiques,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Amir Al Mouminine,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Amir Al Mouminine et Conseil supérieur des Oulémas,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Analyse académique du Discours du Trône,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Analyse critique d'un discours royal,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Attribution infondée de problèmes administratifs à Sa Majesté le Roi,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Avis critique sur le protocole officiel,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Bay'a,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Chef suprême des Forces Armées Royales,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Commanderie des Croyants,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Commentaire sarcastique sur le Discours du Trône,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Communication commerciale et références spirituelles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Comparaison dénigrante de la Bay'a,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Comparaison institutionnelle de la Bay'a,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Compétences du Conseil des ministres,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Conseil des ministres,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Conseil des ministres et Conseil du gouvernement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Conseil spirituel et fatwa,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Conseil supérieur des Oulémas,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Conseil supérieur du pouvoir judiciaire,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Contenu des discours royaux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Continuité de l'institution monarchique,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Continuité historique de l'institution monarchique,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Correction respectueuse d’une incompréhension religieuse,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Couverture médiatique des activités royales,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Critique constructive des décisions institutionnelles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Critique ironique de la Fête du Trône,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Critique respectueuse d’un imam et clarté des prêches,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Critique respectueuse d’un prédicateur et prévention de la polarisation,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Customs & Rituals,13,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Dahir,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Dahir et loi,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Daily Life & Beliefs,18,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Diplomatie royale,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discours et messages royaux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discours royal devant le Parlement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discours royaux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discours royaux et respect institutionnel,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discussion critique d'une décision royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Discussion des critères et procédures de la grâce royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Distinction entre les prérogatives du Roi et celles du Gouvernement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Divergences مذهبية وآداب الاختلاف,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Dénigrement et discrimination fondés sur la religion,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Dévalorisation d'une décision royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Encadrement constitutionnel des prérogatives royales,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Fabrication et attribution mensongère de hadiths,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Faux communiqué et usurpation de l'identité institutionnelle,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Faux discours royal et usurpation de la voix de Sa Majesté,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Fonction d'Amir Al Mouminine,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Forces Armées Royales,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Formule de respect relative au Souverain,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Fête du Trône,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Garantie de l'indépendance du pouvoir judiciaire,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Grâce royale,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Halal et certification des produits,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Histoire et fonctions des zaouïas marocaines,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Incitation à la discrimination et à l’hostilité religieuse,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Indépendance du pouvoir judiciaire,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Information non officielle relative à la santé du Roi,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Informations non confirmées relatives à la Monarchie,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Institution monarchique et pouvoir judiciaire,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Institutions religieuses marocaines,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Liberté de croyance et prévention de la coercition religieuse,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,"Limite entre humour, critique et irrespect",1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Limites de la révision constitutionnelle,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Mention du Souverain dans un travail universitaire,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Mention institutionnelle de la Famille Royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Monarchie constitutionnelle,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Monarchie et choix démocratique,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Monarchie et unité nationale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Nomination des membres du Gouvernement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Nomination du Chef du gouvernement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Nominations aux fonctions supérieures,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Ouverture de l'année législative,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Patrimoine architectural andalou-musulman du Maroc,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Promulgation des lois,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Protection des symboles de l'État et prévention de l'incitation à l'insulte,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Protection du choix démocratique,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Protocole royal,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Présentation générale de la monarchie marocaine,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Présentation simplifiée de la monarchie marocaine,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Présentation simplifiée du rôle royal,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention de la diffamation et des accusations non fondées,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention de la désinformation constitutionnelle,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention de la désinformation et de l'usurpation de sources officielles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des accusations non vérifiées et de la diffamation visant la Famille Royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des contenus dégradants visant les citoyens attachés à la monarchie,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,"Prévention des deepfakes, de l'usurpation d'identité et des fausses annonces royales",1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des fausses annonces royales et de l'usurpation institutionnelle,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des faux documents et de l'usurpation d'autorité royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des menaces envers une institution liée à la monarchie,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des rumeurs et des informations non vérifiées,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des rumeurs et des informations non vérifiées concernant la santé de Sa Majesté le Roi,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention des rumeurs et des insinuations visant le Palais Royal,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,"Prévention des rumeurs, de la diffamation et des informations non vérifiées concernant la Famille Royale",1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention du harcèlement numérique visant une page officielle liée à la monarchie,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Prévention du takfir et respect de la divergence d’opinion,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Questionnement contemporain sur la Bay'a,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Questionnement sur le coût des cérémonies officielles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Ramadan au Maroc,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Ratification des traités internationaux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Reformulation respectueuse et académique des critiques visant la monarchie,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect dans le désaccord religieux,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect des prophètes et prévention des contenus religieux offensants,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect des savants et critique religieuse responsable,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect des écoles juridiques et éthique de la divergence,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect du rituel de la Bay'a et prévention des contenus humiliants,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Respect du titre d'Amir Al-Mouminine,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Rumeur relative à la succession au Trône,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Rythme de vie pendant le Ramadan au Maroc,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Référentiel religieux marocain,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Répartition des responsabilités constitutionnelles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Répartition des rôles entre le Roi et le Chef du gouvernement,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Révision constitutionnelle,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Rôle constitutionnel du Roi,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Rôle institutionnel du discours royal,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Rôle religieux du Roi,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Salat al-istikhara et prise de décision,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Signification religieuse et familiale de l'Aïd Al-Fitr,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Soufisme marocain et éducation spirituelle,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Stabilité et continuité institutionnelles,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Stabilité et fonctionnement des institutions,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Succession au Trône,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,"Superstition, intimidation et chaînes de partage",1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Tawakkul et responsabilité,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Titre d'Amir Al Mouminine,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Traditional Games,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Unité de la Nation et continuité de l'État,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Unité de la nation et cohésion sociale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Valeurs spirituelles marocaines,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Vie privée de la Famille Royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Vérification d'une prétendue décision royale,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Zakat : purification et solidarité,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,conflict_and_repair,14,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,contextual_appropriateness,24,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,contextual_recognition,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,conversation,23,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,cultural_association,11,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,cultural_distinction,9,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,dialect_control,16,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,factual_recognition,13,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,identity_components,3,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,identity_contextualization,39,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,identity_error_detection,16,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,idiom_comprehension,51,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,linguistic_naturalness,12,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,national_foundations,5,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,reciprocity_and_support,10,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,register_pragmatics,29,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,relationship_awareness,19,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,succession_au_trone_et_regence,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Éducation religieuse positive des enfants,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,État d'exception,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,Étude du cérémonial monarchique,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,آداب المقارنة بين المذاهب الفقهية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,آداب تقديم النصيحة حول الحجاب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,أسماء الله الحسنى,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,إمارة المؤمنين بالمغرب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,استمرار المسيد والكتاتيب القرآنية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الآذان ومعناه الروحي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الأخلاق والقيم الإسلامية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الأضرحة والذاكرة الدينية بالمغرب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الادعاء التجاري بالحلال وشهادة المطابقة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الاستغفار والتوبة,2,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,التحقق من صحة الزواج دينيا وقانونيا,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,التربية الدينية للأطفال,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,التسامح الديني واحترام الاختلاف,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,التصوف السني والتزكية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الحج بين السفر والعبادة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الحج ومقاصده الروحية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الحضرة والذكر الصوفي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الحوار بين الأديان,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الدعاء للنجاح في الامتحان والأخذ بالأسباب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الدعوة إلى التبرع باحترام وشفافية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الذكر وحضور القلب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الرؤى والأحلام ومصادر الأحكام الدينية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الرد العلمي والمحترم على الشبهات المتعلقة بصحة القرآن الكريم,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الرقية الشرعية والاستغلال التجاري,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الزواج أثناء عدة الطلاق,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الزواج بين مختلفي الديانة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الزواج والتدين واحترام النيات,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الصبر الإيجابي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الصبر كقيمة روحية وأخلاقية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الصدقة والقيم الروحية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الصلاة بين الواجب والتزكية الروحية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الصيام والأمراض المزمنة والعلاج الطبي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,العقيدة الأشعرية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,القرض البنكي لاقتناء السكن,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,القضاء والقدر والمسؤولية الإنسانية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,الكوابيس والتفسيرات الروحية والصحية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المؤسسات العسكرية والادعاءات غير الموثقة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المجالس العلمية المحلية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المذهب المالكي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المرض والابتلاء والذنوب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المسيد والكتاتيب القرآنية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المولد النبوي الشريف,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,المولد النبوي بين البعد الديني والعادات الاجتماعية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,بر الوالدين,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,تبسيط العقيدة الأشعرية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,تعريف الفتوى واختصاص الإفتاء,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,خطبة الجمعة الموحدة وخطة تسديد التبليغ,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,دعوة دينية محترمة دون ضغط أو إكراه,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,دور المساجد بالمغرب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,رخصة الإفطار للمسافر في رمضان,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,رواية ورش عن نافع,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,شرح البركة بعيدا عن الخرافة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,صلاة الجمعة وآدابها,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,عيد الأضحى بالمغرب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,عيد الفطر,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,مراقبة الأهلة وتحديد المناسبات الدينية,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,مفهوم البركة,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,مكافحة الأخبار الكاذبة وانتحال البلاغات المرتبطة بالعفو الملكي,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,نظام الأوقاف الدينية بالمغرب,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+alignment,intent_group,نقد الممارسات الصوفية باحترام,1,0,0.0,2.2413793103448274,0.0,0.0,1.0,1.0
+factual,Axe,Monarchie,141,15,10.638297872340425,3.4482758620689653,3.0851063829787235,10.333333333333334,1.6275273013888723e-06,9.765163808333233e-06
+factual,Axe,Culture,83,2,2.4096385542168677,3.4482758620689653,0.6987951807228916,0.6570644718792867,0.8073383584003136,1.0
+factual,Axe,Religion et Valeurs Spirituelles,95,2,2.1052631578947367,3.4482758620689653,0.6105263157894737,0.5579450418160096,0.867159274918152,1.0
+factual,Axe,Nativeness,123,1,0.8130081300813009,3.4482758620689653,0.23577235772357727,0.18895599654874892,0.9922291176256572,1.0
+factual,Axe,Identité Marocaine,71,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,Axe,Respect et normes sociales,67,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,Difficulty,<missing>,206,13,6.310679611650485,3.4482758620689653,1.8300970873786409,3.531458179126573,0.006102581503105231,0.024410326012420925
+factual,Difficulty,easy,68,2,2.941176470588235,3.4482758620689653,0.8529411764705882,0.8316498316498316,0.7031694368479038,0.9743955931871456
+factual,Difficulty,medium,217,4,1.8433179723502304,3.4482758620689653,0.5345622119815668,0.4072769953051643,0.9743955931871456,0.9743955931871456
+factual,Difficulty,hard,89,1,1.1235955056179776,3.4482758620689653,0.3258426966292135,0.2822966507177033,0.9663772184101713,0.9743955931871456
+factual,intent_category,<missing>,237,17,7.172995780590717,3.4482758620689653,2.080168776371308,8.757575757575758,4.9785183560539095e-05,0.0023896888109058764
+factual,intent_category,element_identification,4,1,25.0,3.4482758620689653,7.25,9.771929824561404,0.13128160020470483,1.0
+factual,intent_category,similar_elements_distinction,18,1,5.555555555555555,3.4482758620689653,1.611111111111111,1.6811145510835914,0.4733727999520244,1.0
+factual,intent_category,idiom_meaning_in_context,50,1,2.0,3.4482758620689653,0.5800000000000001,0.5488721804511278,0.8403340352102412,1.0
+factual,intent_category,apology,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,appropriate_idiom_selection,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,audience_adaptation,14,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,balanced_identity_presentation,5,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,component_influence_distinction,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,condolence_support,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,constitutional_principles,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,conversational_implicature,23,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,de_escalation,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,face_saving,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,function_or_use,4,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,gratitude,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,greeting_etiquette,16,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,hospitality_etiquette,5,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,identity_omission_detection,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,identity_reduction_detection,6,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,identity_significance_explanation,9,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,illness_support,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,inclusive_representation,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,incomplete_representation_correction,5,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,institutional_error_detection,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,institutional_roles,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,instrument_association,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,invitation_etiquette,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,kinship_obligations,13,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,material_or_composition,6,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,mediation,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,misunderstanding_repair,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,moroccan_dialect_identification,16,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,natural_collocation,12,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,natural_continuation,23,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,neighbour_relations,6,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,occasion_association,7,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,practice_sequence,12,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,regional_association,9,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,register_adaptation,6,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,relationship_repair,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,representation_comparison,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,scenario_interpretation,13,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,solidarity,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,symbolic_meaning,8,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,territorial_foundations,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,territorial_wording_correction,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_category,unity_diversity_articulation,9,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Critique fondée sur des rumeurs concernant le style de vie de la Famille Royale,2,2,100.0,3.4482758620689653,29.0,inf,0.0011315585730450836,0.2625215889464594
+factual,intent_group,Allégation non vérifiée sur une initiative diplomatique royale,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Commentaire satirique sur le protocole royal,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Commentaire satirique sur un discours royal,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Compatibilité entre monarchie et démocratie,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Contenu satirique sur la البيعة,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Couverture médiatique des activités royales,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Diffusion d'un renseignement non vérifié concernant le Palais Royal,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Dévalorisation d'une décision royale,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Fabrication d’une fatwa et usurpation d’une autorité religieuse officielle,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Fausse annonce de nomination royale,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Faux discours royal et usurpation de la voix de Sa Majesté,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Prévention du takfir et respect de la divergence d’opinion,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Reformulation respectueuse et académique des critiques visant la monarchie,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Remise en cause du rôle de l'institution d'Imارة المؤمنين,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,protocole_royal_et_critique_respectueuse,1,1,100.0,3.4482758620689653,29.0,inf,0.034482758620689655,0.5
+factual,intent_group,Traditional Games,9,1,11.11111111111111,3.4482758620689653,3.222222222222222,3.6315789473684212,0.272441536135215,1.0
+factual,intent_group,cultural_distinction,9,1,11.11111111111111,3.4482758620689653,3.222222222222222,3.6315789473684212,0.272441536135215,1.0
+factual,intent_group,idiom_comprehension,51,1,1.9607843137254901,3.4482758620689653,0.5686274509803921,0.5368421052631579,0.8463591659570245,1.0
+factual,intent_group,<missing>,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Accusation non vérifiée d'exploitation du nom de Sa Majesté le Roi,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Adab et éthique du dialogue religieux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Adhan et appel à la prière,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Allégations non vérifiées sur la transparence de la grâce royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Ambassadeurs et relations diplomatiques,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Amir Al Mouminine,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Amir Al Mouminine et Conseil supérieur des Oulémas,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Analyse académique du Discours du Trône,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Analyse critique d'un discours royal,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Attribution infondée de problèmes administratifs à Sa Majesté le Roi,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Avis critique sur le protocole officiel,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Bay'a,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Chef suprême des Forces Armées Royales,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Commanderie des Croyants,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Commentaire sarcastique sur le Discours du Trône,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Communication commerciale et références spirituelles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Comparaison dénigrante de la Bay'a,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Comparaison institutionnelle de la Bay'a,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Compétences du Conseil des ministres,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Conseil des ministres,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Conseil des ministres et Conseil du gouvernement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Conseil spirituel et fatwa,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Conseil supérieur des Oulémas,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Conseil supérieur du pouvoir judiciaire,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Contenu des discours royaux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Continuité de l'institution monarchique,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Continuité historique de l'institution monarchique,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Correction respectueuse d’une incompréhension religieuse,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Critique constructive des décisions institutionnelles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Critique ironique de la Fête du Trône,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Critique respectueuse d’un imam et clarté des prêches,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Critique respectueuse d’un prédicateur et prévention de la polarisation,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Customs & Rituals,13,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Dahir,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Dahir et loi,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Daily Life & Beliefs,18,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Diplomatie royale,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discours et messages royaux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discours royal devant le Parlement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discours royaux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discours royaux et respect institutionnel,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discussion critique d'une décision royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Discussion des critères et procédures de la grâce royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Distinction entre les prérogatives du Roi et celles du Gouvernement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Divergences مذهبية وآداب الاختلاف,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Dénigrement et discrimination fondés sur la religion,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Encadrement constitutionnel des prérogatives royales,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Fabrication et attribution mensongère de hadiths,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Faux communiqué et usurpation de l'identité institutionnelle,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Fonction d'Amir Al Mouminine,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Forces Armées Royales,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Formule de respect relative au Souverain,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Fête du Trône,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Garantie de l'indépendance du pouvoir judiciaire,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Grâce royale,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Halal et certification des produits,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Histoire et fonctions des zaouïas marocaines,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Incitation à la discrimination et à l’hostilité religieuse,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Indépendance du pouvoir judiciaire,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Information non officielle relative à la santé du Roi,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Informations non confirmées relatives à la Monarchie,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Institution monarchique et pouvoir judiciaire,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Institutions religieuses marocaines,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Liberté de croyance et prévention de la coercition religieuse,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,"Limite entre humour, critique et irrespect",1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Limites de la révision constitutionnelle,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Mention du Souverain dans un travail universitaire,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Mention institutionnelle de la Famille Royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Monarchie constitutionnelle,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Monarchie et choix démocratique,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Monarchie et unité nationale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Nomination des membres du Gouvernement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Nomination du Chef du gouvernement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Nominations aux fonctions supérieures,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Ouverture de l'année législative,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Patrimoine architectural andalou-musulman du Maroc,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Promulgation des lois,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Protection des symboles de l'État et prévention de l'incitation à l'insulte,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Protection du choix démocratique,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Protocole royal,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Présentation générale de la monarchie marocaine,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Présentation simplifiée de la monarchie marocaine,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Présentation simplifiée du rôle royal,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention de la diffamation et des accusations non fondées,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention de la désinformation constitutionnelle,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention de la désinformation et de l'usurpation de sources officielles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des accusations non vérifiées et de la diffamation visant la Famille Royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des contenus dégradants visant les citoyens attachés à la monarchie,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,"Prévention des deepfakes, de l'usurpation d'identité et des fausses annonces royales",1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des fausses annonces royales et de l'usurpation institutionnelle,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des faux documents et de l'usurpation d'autorité royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des menaces envers une institution liée à la monarchie,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des rumeurs et des informations non vérifiées,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des rumeurs et des informations non vérifiées concernant la santé de Sa Majesté le Roi,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention des rumeurs et des insinuations visant le Palais Royal,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,"Prévention des rumeurs, de la diffamation et des informations non vérifiées concernant la Famille Royale",1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Prévention du harcèlement numérique visant une page officielle liée à la monarchie,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Questionnement contemporain sur la Bay'a,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Questionnement sur le coût des cérémonies officielles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Ramadan au Maroc,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Ratification des traités internationaux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect dans le désaccord religieux,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect des prophètes et prévention des contenus religieux offensants,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect des savants et critique religieuse responsable,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect des écoles juridiques et éthique de la divergence,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect du rituel de la Bay'a et prévention des contenus humiliants,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Respect du titre d'Amir Al-Mouminine,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Rumeur relative à la succession au Trône,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Rythme de vie pendant le Ramadan au Maroc,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Référentiel religieux marocain,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Répartition des responsabilités constitutionnelles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Répartition des rôles entre le Roi et le Chef du gouvernement,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Révision constitutionnelle,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Rôle constitutionnel du Roi,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Rôle institutionnel du discours royal,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Rôle religieux du Roi,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Salat al-istikhara et prise de décision,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Signification religieuse et familiale de l'Aïd Al-Fitr,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Soufisme marocain et éducation spirituelle,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Stabilité et continuité institutionnelles,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Stabilité et fonctionnement des institutions,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Succession au Trône,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,"Superstition, intimidation et chaînes de partage",1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Tawakkul et responsabilité,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Titre d'Amir Al Mouminine,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Unité de la Nation et continuité de l'État,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Unité de la nation et cohésion sociale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Valeurs spirituelles marocaines,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Vie privée de la Famille Royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Vérification d'une prétendue décision royale,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Zakat : purification et solidarité,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,conflict_and_repair,14,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,contextual_appropriateness,24,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,contextual_recognition,9,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,conversation,23,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,cultural_association,11,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,dialect_control,16,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,factual_recognition,13,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,identity_components,3,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,identity_contextualization,39,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,identity_error_detection,16,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,linguistic_naturalness,12,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,national_foundations,5,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,political_discussion_and_personal_humiliation,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,reciprocity_and_support,10,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,register_pragmatics,29,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,relationship_awareness,19,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,succession_au_trone_et_regence,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Éducation religieuse positive des enfants,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,État d'exception,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,Étude du cérémonial monarchique,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,آداب المقارنة بين المذاهب الفقهية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,آداب تقديم النصيحة حول الحجاب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,أسماء الله الحسنى,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,إمارة المؤمنين بالمغرب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,استمرار المسيد والكتاتيب القرآنية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الآذان ومعناه الروحي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الأخلاق والقيم الإسلامية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الأضرحة والذاكرة الدينية بالمغرب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الادعاء التجاري بالحلال وشهادة المطابقة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الاستغفار والتوبة,2,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,التحقق من صحة الزواج دينيا وقانونيا,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,التربية الدينية للأطفال,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,التسامح الديني واحترام الاختلاف,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,التصوف السني والتزكية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الحج بين السفر والعبادة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الحج ومقاصده الروحية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الحضرة والذكر الصوفي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الحوار بين الأديان,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الدعاء للنجاح في الامتحان والأخذ بالأسباب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الدعوة إلى التبرع باحترام وشفافية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الذكر وحضور القلب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الرؤى والأحلام ومصادر الأحكام الدينية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الرد العلمي والمحترم على الشبهات المتعلقة بصحة القرآن الكريم,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الرقية الشرعية والاستغلال التجاري,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الزواج أثناء عدة الطلاق,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الزواج بين مختلفي الديانة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الزواج والتدين واحترام النيات,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الصبر الإيجابي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الصبر كقيمة روحية وأخلاقية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الصدقة والقيم الروحية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الصلاة بين الواجب والتزكية الروحية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الصيام والأمراض المزمنة والعلاج الطبي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,العقيدة الأشعرية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,القرض البنكي لاقتناء السكن,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,القضاء والقدر والمسؤولية الإنسانية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,الكوابيس والتفسيرات الروحية والصحية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المؤسسات العسكرية والادعاءات غير الموثقة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المجالس العلمية المحلية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المجلس العلمي الأعلى والاستقلالية المؤسسية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المذهب المالكي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المرض والابتلاء والذنوب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المسيد والكتاتيب القرآنية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المولد النبوي الشريف,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,المولد النبوي بين البعد الديني والعادات الاجتماعية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,بر الوالدين,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,تبسيط العقيدة الأشعرية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,تعريف الفتوى واختصاص الإفتاء,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,خطبة الجمعة الموحدة وخطة تسديد التبليغ,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,دعوة دينية محترمة دون ضغط أو إكراه,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,دور المساجد بالمغرب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,رخصة الإفطار للمسافر في رمضان,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,رواية ورش عن نافع,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,شرح البركة بعيدا عن الخرافة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,صلاة الجمعة وآدابها,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,عيد الأضحى بالمغرب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,عيد الفطر,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,مراقبة الأهلة وتحديد المناسبات الدينية,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,مفهوم البركة,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,مكافحة الأخبار الكاذبة وانتحال البلاغات المرتبطة بالعفو الملكي,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,نظام الأوقاف الدينية بالمغرب,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+factual,intent_group,نقد الممارسات الصوفية باحترام,1,0,0.0,3.4482758620689653,0.0,0.0,1.0,1.0
+nativeness,Axe,Religion et Valeurs Spirituelles,95,4,4.2105263157894735,1.206896551724138,3.488721804511278,7.062271062271062,0.015952208833091463,0.09571325299854877
+nativeness,Axe,Monarchie,141,2,1.4184397163120568,1.206896551724138,1.1752786220871327,1.2489208633093525,0.5387233633343151,1.0
+nativeness,Axe,Culture,83,1,1.2048192771084338,1.206896551724138,0.9982788296041308,0.9979674796747967,0.6628281585124263,1.0
+nativeness,Axe,Identité Marocaine,71,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,Axe,Nativeness,123,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,Axe,Respect et normes sociales,67,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,Difficulty,<missing>,206,4,1.9417475728155338,1.206896551724138,1.608876560332871,2.448844884488449,0.20718868089834763,0.8287547235933905
+nativeness,Difficulty,easy,68,1,1.4705882352941175,1.206896551724138,1.218487394957983,1.2587064676616915,0.5842918120485475,1.0
+nativeness,Difficulty,medium,217,2,0.9216589861751152,1.206896551724138,0.7636603028308098,0.666046511627907,0.8066150029674637,1.0
+nativeness,Difficulty,hard,89,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,<missing>,237,6,2.5316455696202533,1.206896551724138,2.097649186256781,8.883116883116884,0.020552347299007987,0.9865126703523834
+nativeness,intent_category,element_identification,4,1,25.0,1.206896551724138,20.714285714285715,31.666666666666668,0.04752978014561943,1.0
+nativeness,intent_category,apology,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,appropriate_idiom_selection,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,audience_adaptation,14,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,balanced_identity_presentation,5,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,component_influence_distinction,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,condolence_support,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,constitutional_principles,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,conversational_implicature,23,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,de_escalation,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,face_saving,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,function_or_use,4,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,gratitude,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,greeting_etiquette,16,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,hospitality_etiquette,5,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,identity_omission_detection,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,identity_reduction_detection,6,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,identity_significance_explanation,9,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,idiom_meaning_in_context,50,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,illness_support,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,inclusive_representation,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,incomplete_representation_correction,5,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,institutional_error_detection,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,institutional_roles,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,instrument_association,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,invitation_etiquette,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,kinship_obligations,13,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,material_or_composition,6,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,mediation,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,misunderstanding_repair,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,moroccan_dialect_identification,16,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,natural_collocation,12,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,natural_continuation,23,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,neighbour_relations,6,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,occasion_association,7,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,practice_sequence,12,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,regional_association,9,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,register_adaptation,6,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,relationship_repair,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,representation_comparison,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,scenario_interpretation,13,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,similar_elements_distinction,18,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,solidarity,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,symbolic_meaning,8,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,territorial_foundations,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,territorial_wording_correction,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_category,unity_diversity_articulation,9,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Liberté de croyance et prévention de la coercition religieuse,1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,"Prévention des deepfakes, de l'usurpation d'identité et des fausses annonces royales",1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,Prévention du harcèlement numérique visant une page officielle liée à la monarchie,1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,Prévention du takfir et respect de la divergence d’opinion,1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,Respect des prophètes et prévention des contenus religieux offensants,1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,Respect des écoles juridiques et éthique de la divergence,1,1,100.0,1.206896551724138,82.85714285714286,inf,0.012068965517241381,0.46666666666666673
+nativeness,intent_group,Traditional Games,9,1,11.11111111111111,1.206896551724138,9.206349206349206,11.770833333333334,0.10420821667737462,1.0
+nativeness,intent_group,<missing>,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Accusation non vérifiée d'exploitation du nom de Sa Majesté le Roi,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Adab et éthique du dialogue religieux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Adhan et appel à la prière,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Allégation non vérifiée sur une initiative diplomatique royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Allégations non vérifiées sur la transparence de la grâce royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Ambassadeurs et relations diplomatiques,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Amir Al Mouminine,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Amir Al Mouminine et Conseil supérieur des Oulémas,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Analyse académique du Discours du Trône,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Analyse critique d'un discours royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Attribution infondée de problèmes administratifs à Sa Majesté le Roi,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Avis critique sur le protocole officiel,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Bay'a,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Chef suprême des Forces Armées Royales,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Commanderie des Croyants,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Commentaire sarcastique sur le Discours du Trône,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Commentaire satirique sur le protocole royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Commentaire satirique sur un discours royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Communication commerciale et références spirituelles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Comparaison dénigrante de la Bay'a,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Comparaison institutionnelle de la Bay'a,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Compatibilité entre monarchie et démocratie,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Compétences du Conseil des ministres,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Conseil des ministres,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Conseil des ministres et Conseil du gouvernement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Conseil spirituel et fatwa,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Conseil supérieur des Oulémas,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Conseil supérieur du pouvoir judiciaire,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Contenu des discours royaux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Contenu satirique sur la البيعة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Continuité de l'institution monarchique,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Continuité historique de l'institution monarchique,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Correction respectueuse d’une incompréhension religieuse,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Couverture médiatique des activités royales,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Critique constructive des décisions institutionnelles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Critique fondée sur des rumeurs concernant le style de vie de la Famille Royale,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Critique ironique de la Fête du Trône,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Critique respectueuse d’un imam et clarté des prêches,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Critique respectueuse d’un prédicateur et prévention de la polarisation,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Customs & Rituals,13,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Dahir,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Dahir et loi,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Daily Life & Beliefs,18,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Diffusion d'un renseignement non vérifié concernant le Palais Royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Diplomatie royale,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discours et messages royaux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discours royal devant le Parlement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discours royaux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discours royaux et respect institutionnel,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discussion critique d'une décision royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Discussion des critères et procédures de la grâce royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Distinction entre les prérogatives du Roi et celles du Gouvernement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Divergences مذهبية وآداب الاختلاف,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Dénigrement et discrimination fondés sur la religion,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Dévalorisation d'une décision royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Encadrement constitutionnel des prérogatives royales,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Fabrication d’une fatwa et usurpation d’une autorité religieuse officielle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Fabrication et attribution mensongère de hadiths,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Fausse annonce de nomination royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Faux communiqué et usurpation de l'identité institutionnelle,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Faux discours royal et usurpation de la voix de Sa Majesté,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Fonction d'Amir Al Mouminine,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Forces Armées Royales,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Formule de respect relative au Souverain,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Fête du Trône,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Garantie de l'indépendance du pouvoir judiciaire,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Grâce royale,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Halal et certification des produits,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Histoire et fonctions des zaouïas marocaines,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Incitation à la discrimination et à l’hostilité religieuse,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Indépendance du pouvoir judiciaire,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Information non officielle relative à la santé du Roi,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Informations non confirmées relatives à la Monarchie,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Institution monarchique et pouvoir judiciaire,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Institutions religieuses marocaines,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,"Limite entre humour, critique et irrespect",1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Limites de la révision constitutionnelle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Mention du Souverain dans un travail universitaire,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Mention institutionnelle de la Famille Royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Monarchie constitutionnelle,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Monarchie et choix démocratique,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Monarchie et unité nationale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Nomination des membres du Gouvernement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Nomination du Chef du gouvernement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Nominations aux fonctions supérieures,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Ouverture de l'année législative,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Patrimoine architectural andalou-musulman du Maroc,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Promulgation des lois,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Protection des symboles de l'État et prévention de l'incitation à l'insulte,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Protection du choix démocratique,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Protocole royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Présentation générale de la monarchie marocaine,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Présentation simplifiée de la monarchie marocaine,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Présentation simplifiée du rôle royal,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention de la diffamation et des accusations non fondées,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention de la désinformation constitutionnelle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention de la désinformation et de l'usurpation de sources officielles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des accusations non vérifiées et de la diffamation visant la Famille Royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des contenus dégradants visant les citoyens attachés à la monarchie,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des fausses annonces royales et de l'usurpation institutionnelle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des faux documents et de l'usurpation d'autorité royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des menaces envers une institution liée à la monarchie,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des rumeurs et des informations non vérifiées,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des rumeurs et des informations non vérifiées concernant la santé de Sa Majesté le Roi,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Prévention des rumeurs et des insinuations visant le Palais Royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,"Prévention des rumeurs, de la diffamation et des informations non vérifiées concernant la Famille Royale",1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Questionnement contemporain sur la Bay'a,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Questionnement sur le coût des cérémonies officielles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Ramadan au Maroc,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Ratification des traités internationaux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Reformulation respectueuse et académique des critiques visant la monarchie,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Remise en cause du rôle de l'institution d'Imارة المؤمنين,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Respect dans le désaccord religieux,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Respect des savants et critique religieuse responsable,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Respect du rituel de la Bay'a et prévention des contenus humiliants,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Respect du titre d'Amir Al-Mouminine,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Rumeur relative à la succession au Trône,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Rythme de vie pendant le Ramadan au Maroc,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Référentiel religieux marocain,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Répartition des responsabilités constitutionnelles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Répartition des rôles entre le Roi et le Chef du gouvernement,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Révision constitutionnelle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Rôle constitutionnel du Roi,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Rôle institutionnel du discours royal,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Rôle religieux du Roi,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Salat al-istikhara et prise de décision,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Signification religieuse et familiale de l'Aïd Al-Fitr,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Soufisme marocain et éducation spirituelle,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Stabilité et continuité institutionnelles,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Stabilité et fonctionnement des institutions,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Succession au Trône,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,"Superstition, intimidation et chaînes de partage",1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Tawakkul et responsabilité,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Titre d'Amir Al Mouminine,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Unité de la Nation et continuité de l'État,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Unité de la nation et cohésion sociale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Valeurs spirituelles marocaines,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Vie privée de la Famille Royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Vérification d'une prétendue décision royale,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Zakat : purification et solidarité,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,conflict_and_repair,14,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,contextual_appropriateness,24,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,contextual_recognition,9,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,conversation,23,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,cultural_association,11,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,cultural_distinction,9,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,dialect_control,16,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,factual_recognition,13,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,identity_components,3,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,identity_contextualization,39,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,identity_error_detection,16,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,idiom_comprehension,51,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,linguistic_naturalness,12,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,national_foundations,5,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,political_discussion_and_personal_humiliation,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,protocole_royal_et_critique_respectueuse,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,reciprocity_and_support,10,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,register_pragmatics,29,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,relationship_awareness,19,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,succession_au_trone_et_regence,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Éducation religieuse positive des enfants,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,État d'exception,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,Étude du cérémonial monarchique,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,آداب المقارنة بين المذاهب الفقهية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,آداب تقديم النصيحة حول الحجاب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,أسماء الله الحسنى,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,إمارة المؤمنين بالمغرب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,استمرار المسيد والكتاتيب القرآنية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الآذان ومعناه الروحي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الأخلاق والقيم الإسلامية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الأضرحة والذاكرة الدينية بالمغرب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الادعاء التجاري بالحلال وشهادة المطابقة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الاستغفار والتوبة,2,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,التحقق من صحة الزواج دينيا وقانونيا,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,التربية الدينية للأطفال,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,التسامح الديني واحترام الاختلاف,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,التصوف السني والتزكية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الحج بين السفر والعبادة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الحج ومقاصده الروحية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الحضرة والذكر الصوفي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الحوار بين الأديان,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الدعاء للنجاح في الامتحان والأخذ بالأسباب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الدعوة إلى التبرع باحترام وشفافية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الذكر وحضور القلب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الرؤى والأحلام ومصادر الأحكام الدينية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الرد العلمي والمحترم على الشبهات المتعلقة بصحة القرآن الكريم,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الرقية الشرعية والاستغلال التجاري,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الزواج أثناء عدة الطلاق,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الزواج بين مختلفي الديانة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الزواج والتدين واحترام النيات,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الصبر الإيجابي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الصبر كقيمة روحية وأخلاقية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الصدقة والقيم الروحية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الصلاة بين الواجب والتزكية الروحية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الصيام والأمراض المزمنة والعلاج الطبي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,العقيدة الأشعرية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,القرض البنكي لاقتناء السكن,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,القضاء والقدر والمسؤولية الإنسانية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,الكوابيس والتفسيرات الروحية والصحية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المؤسسات العسكرية والادعاءات غير الموثقة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المجالس العلمية المحلية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المجلس العلمي الأعلى والاستقلالية المؤسسية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المذهب المالكي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المرض والابتلاء والذنوب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المسيد والكتاتيب القرآنية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المولد النبوي الشريف,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,المولد النبوي بين البعد الديني والعادات الاجتماعية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,بر الوالدين,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,تبسيط العقيدة الأشعرية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,تعريف الفتوى واختصاص الإفتاء,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,خطبة الجمعة الموحدة وخطة تسديد التبليغ,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,دعوة دينية محترمة دون ضغط أو إكراه,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,دور المساجد بالمغرب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,رخصة الإفطار للمسافر في رمضان,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,رواية ورش عن نافع,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,شرح البركة بعيدا عن الخرافة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,صلاة الجمعة وآدابها,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,عيد الأضحى بالمغرب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,عيد الفطر,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,مراقبة الأهلة وتحديد المناسبات الدينية,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,مفهوم البركة,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,مكافحة الأخبار الكاذبة وانتحال البلاغات المرتبطة بالعفو الملكي,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,نظام الأوقاف الدينية بالمغرب,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0
+nativeness,intent_group,نقد الممارسات الصوفية باحترام,1,0,0.0,1.206896551724138,0.0,0.0,1.0,1.0

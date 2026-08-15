@@ -1,0 +1,9 @@
+hf download MBZUAI-Paris/Atlas-Chat-27B --local-dir ./Atlas-Chat-27B
+
+hf download GemMaroc/GemMaroc-27b-it --local-dir ./GemMaroc-27b-it
+
+hf download CohereLabs/aya-expanse-32b --local-dir ./aya-expanse-32b
+
+hf download humain-ai/ALLaM-7B-Instruct-preview --local-dir ./ALLaM-7B-Instruct-preview
+
+hf download inceptionai/Jais-2-8B-Chat --local-dir ./Jais-2-8B-Chat
