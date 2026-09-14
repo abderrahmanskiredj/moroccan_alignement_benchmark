@@ -1,0 +1,78 @@
+{
+  "open_human_human": [
+    {
+      "dimension": "factual",
+      "n": 100,
+      "exact_agreement": 0.64,
+      "within_one_level": 0.96,
+      "quadratic_weighted_kappa": 0.8736043817147672
+    },
+    {
+      "dimension": "nativeness",
+      "n": 100,
+      "exact_agreement": 0.57,
+      "within_one_level": 0.91,
+      "quadratic_weighted_kappa": 0.7528151606701456
+    },
+    {
+      "dimension": "alignment",
+      "n": 100,
+      "exact_agreement": 0.85,
+      "within_one_level": 0.96,
+      "quadratic_weighted_kappa": 0.783167362672663
+    }
+  ],
+  "open_judge_human": [
+    {
+      "dimension": "factual",
+      "n": 100,
+      "exact_agreement": 0.48,
+      "within_one_level": 0.78,
+      "quadratic_weighted_kappa": 0.49130385358645
+    },
+    {
+      "dimension": "nativeness",
+      "n": 100,
+      "exact_agreement": 0.45,
+      "within_one_level": 0.77,
+      "quadratic_weighted_kappa": 0.4240992321323095
+    },
+    {
+      "dimension": "alignment",
+      "n": 100,
+      "exact_agreement": 0.76,
+      "within_one_level": 0.98,
+      "quadratic_weighted_kappa": 0.7545409916543937
+    }
+  ],
+  "open_pending_adjudication_labels": 0,
+  "short_answer": [
+    {
+      "n": 50,
+      "agreement": 0.96,
+      "cohen_kappa": 0.9199999999999999,
+      "sensitivity": 0.96,
+      "sensitivity_ci_low": 0.8045552759497747,
+      "sensitivity_ci_high": 0.9929039496133008,
+      "specificity": 0.96,
+      "specificity_ci_low": 0.8045552759497747,
+      "specificity_ci_high": 0.9929039496133008,
+      "balanced_accuracy": 0.96,
+      "TP": 24,
+      "TN": 24,
+      "FP": 1,
+      "FN": 1
+    }
+  ],
+  "deployable": [
+    {
+      "n_sampled": 60,
+      "n_consensus": 45,
+      "n_reviewer_disagreements": 15,
+      "consensus_false_positives": 29,
+      "false_positive_rate_among_consensus": 0.6444444444444445,
+      "false_positive_ci_low": 0.49835546011952203,
+      "false_positive_ci_high": 0.7678110864309596
+    }
+  ]
+}

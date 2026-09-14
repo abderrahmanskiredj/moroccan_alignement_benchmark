@@ -1,0 +1,14 @@
+{
+  "seed": 20260816,
+  "open_records": 100,
+  "open_assignments": 200,
+  "short_records": 50,
+  "deployable_records": 60,
+  "judgments_complete": true,
+  "source_sha256": {
+    "outputs\\model_responses\\open_question_final_with_responses.xlsx": "ef4e2204e4d4f3c47df82825fc4aacecf04e3cab837dd52e2085db52f6780835",
+    "outputs\\glm52_judge_outputs\\judgments.jsonl": "d048772ed3cc8494039654dc50c8d9ef2ff491887f1e6c089545444a25adc24a",
+    "outputs\\open_questions_final_scores.xlsx": "0d5d5170633aff1ecdd07e7d2ebea26b89d146ec29e14a81423f264e66f6d770",
+    "outputs\\final_short_answers_scores_llm_judge.xlsx": "18a7c6944a2fb0e6bb065cb0c57e8a4b3cbdd3ca784e535f9c1089f32a72fd35"
+  }
+}

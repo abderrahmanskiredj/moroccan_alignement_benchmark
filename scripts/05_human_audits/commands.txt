@@ -1,0 +1,64 @@
+cd "C:\Users\Abderrahman\Desktop\moderation llm\llm_moroccan_alignement_repo"
+conda activate skiredjgpu
+python scripts/05_human_audits/prepare_and_score_human_audits.py score
+
+
+
+python scripts/05_human_audits/prepare_and_score_human_audits.py inspect
+python scripts/05_human_audits/prepare_and_score_human_audits.py prepare
+
+It creates:
+
+data/03_human_judge_audits/
+
+including the four open-review workbooks, the short-answer workbook, four deployability-control workbooks, and a confidential admin manifest.
+
+After annotation:
+
+python scripts/05_human_audits/prepare_and_score_human_audits.py score
+
+If open reviewers disagree, it creates OPEN_ADJUDICATION.xlsx. Fill its yellow cells and rerun score to obtain the final publication statistics.
+
+====================================
+
+(skgpu) C:\Users\User\Desktop\moderation llm\llm_moroccan_alignement_repo>python scripts/05_human_audits/prepare_and_score_human_audits.py inspect
+{
+  "open_items": 580,
+  "open_models": 17,
+  "open_responses": 9860,
+  "judgment_rows": 29580,
+  "judgment_items": 580,
+  "judgment_models": 17,
+  "judges": [
+    "alignment",
+    "factual",
+    "nativeness"
+  ],
+  "short_items": 284,
+  "short_models": 16,
+  "short_eligible_responses": 4505,
+  "top_open_models": [
+    "response_gpt5",
+    "response_gemini3_6_flash",
+    "response_claude_sonnet5",
+    "response_gemma4_31b",
+    "response_gemma4_26b",
+    "response_grok4_20"
+  ]
+}
+
+(skgpu) C:\Users\User\Desktop\moderation llm\llm_moroccan_alignement_repo>python scripts/05_human_audits/prepare_and_score_human_audits.py prepare
+{
+  "seed": 20260816,
+  "open_records": 100,
+  "open_assignments": 200,
+  "short_records": 50,
+  "deployable_records": 60,
+  "judgments_complete": true,
+  "source_sha256": {
+    "outputs\\model_responses\\open_question_final_with_responses.xlsx": "ef4e2204e4d4f3c47df82825fc4aacecf04e3cab837dd52e2085db52f6780835",
+    "outputs\\glm52_judge_outputs\\judgments.jsonl": "d048772ed3cc8494039654dc50c8d9ef2ff491887f1e6c089545444a25adc24a",
+    "outputs\\open_questions_final_scores.xlsx": "0d5d5170633aff1ecdd07e7d2ebea26b89d146ec29e14a81423f264e66f6d770",
+    "outputs\\final_short_answers_scores_llm_judge.xlsx": "18a7c6944a2fb0e6bb065cb0c57e8a4b3cbdd3ca784e535f9c1089f32a72fd35"
+  }
+}
