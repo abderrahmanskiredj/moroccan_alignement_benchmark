@@ -3,22 +3,7 @@
 **The Moroccan Alignment Benchmark: Cultural Norms, Darija Nativeness and National Domain Knowledge in Large Language Models**  
 Accepted as a **Full Paper at ICAART 2027**, paper #171.
 
-Ferdaous Azhari\*, Abderrahman Skiredj\* (corresponding author), Ikram El Asri, Dounia Zaidouni, Ismail Berrada, and Abdeslam En-Nouaary.  
-\* Equal contribution; Ferdaous Azhari is listed first.
-
-| Author | Affiliation | Email |
-|---|---|---|
-| Ferdaous Azhari | INPT | azhari.ferdaous@doctorant.inpt.ac.ma |
-| Abderrahman Skiredj | Ministry of Artificial Intelligence, Digital Transformation, and Administrative Reform; College of Computing, UM6P | abderrahmanskiredj@hotmail.com |
-| Ikram El Asri | INPT | elasri@inpt.ac.ma |
-| Dounia Zaidouni | INPT | zaidouni@inpt.ac.ma |
-| Ismail Berrada | College of Computing, UM6P | ismail.berrada@um6p.ma |
-| Abdeslam En-Nouaary | INPT | abdeslam@inpt.ac.ma |
-
-INPT: Institut National des Postes et T?l?communications, Morocco. UM6P: Mohammed VI Polytechnic University, Morocco.
-
 Repository: https://github.com/abderrahmanskiredj/moroccan_alignement_benchmark  
-The repository is private during camera-ready preparation. Public release is planned for publication.
 
 ![Evaluation pipeline](assets/diagram.png)
 
