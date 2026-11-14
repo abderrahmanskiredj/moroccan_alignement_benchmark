@@ -3,7 +3,22 @@
 **The Moroccan Alignment Benchmark: Cultural Norms, Darija Nativeness and National Domain Knowledge in Large Language Models**  
 Accepted as a **Full Paper at ICAART 2027**, paper #171.
 
+Ferdaous Azhari\*, Abderrahman Skiredj\* (corresponding author), Ikram El Asri, Dounia Zaidouni, Ismail Berrada, and Abdeslam En-Nouaary.  
+\* Equal contribution; Ferdaous Azhari is listed first.
+
+| Author | Affiliation | Email |
+|---|---|---|
+| Ferdaous Azhari | INPT | azhari.ferdaous@doctorant.inpt.ac.ma |
+| Abderrahman Skiredj | Ministry of Artificial Intelligence, Digital Transformation, and Administrative Reform; College of Computing, UM6P | abderrahmanskiredj@hotmail.com |
+| Ikram El Asri | INPT | elasri@inpt.ac.ma |
+| Dounia Zaidouni | INPT | zaidouni@inpt.ac.ma |
+| Ismail Berrada | College of Computing, UM6P | ismail.berrada@um6p.ma |
+| Abdeslam En-Nouaary | INPT | abdeslam@inpt.ac.ma |
+
+INPT: Institut National des Postes et T?l?communications, Avenue Allal Al Fassi, Madinat Al Irfane, Rabat, Morocco. UM6P: Mohammed VI Polytechnic University, Lot 660, Hay Moulay Rachid, 43150 Benguerir, Morocco. The Ministry is located at Ahmed Cherkaoui Street, Administrative District, Agdal, Rabat, Morocco.
+
 Repository: https://github.com/abderrahmanskiredj/moroccan_alignement_benchmark  
+
 
 ![Evaluation pipeline](assets/diagram.png)
 
@@ -49,7 +64,7 @@ See [annotation policy](configs/annotation_policy.yaml), [cross-annotation recor
 
 ## Evaluation protocol
 
-Seventeen systems are evaluated zero-shot, with Arabic-script Darija prompts, no researcher-supplied system message, one generation per item, and no log-likelihood scoring. Temperature zero is requested for APIs where exposed; self-hosted models use greedy decoding with vLLM in half precision. The self-hosted tier is capped near 32B parameters and is not size matched to proprietary systems.
+Seventeen systems are evaluated zero-shot, with Arabic-script Darija prompts, no researcher-supplied system message, one generation per item, and no log-likelihood scoring. Temperature zero is requested for APIs where exposed; self-hosted models use greedy decoding with vLLM. Weights use FP16/BF16 except for gpt-oss-20b, which retains native MXFP4 expert weights. The self-hosted tier is capped near 32B parameters and is not size matched to proprietary systems.
 
 MCQ and binary prompts request an option letter. A deterministic parser tries explicit letters, verbatim option matches, then normalised matches. Accuracy is correct/all items; unparseable outputs count as incorrect, and coverage is reported separately.
 
@@ -105,7 +120,7 @@ Strict accuracy (%); active parameters are shown for mixture-of-experts models.
 | Atlas-Chat-27B | 27B | 77.8 | 79.2 | 42.3 |
 | Qwen3.6-27B | 27B | 80.2 | 78.4 | 38.7 |
 | Jais-2-8B-Chat | 8B | 79.2 | 73.6 | 43.3 |
-| gpt-oss-20b | 20B | 78.0 | 70.1 | 36.6 |
+| gpt-oss-20b | 20.9B/3.6B | 78.0 | 70.1 | 36.6 |
 | mistral-small-3.2-24b | 24B | 69.5 | 65.4 | 40.5 |
 | Qwen3.5-9B | 9B | 75.7 | 69.7 | 26.1 |
 | Mistral-Saba | 24B | 80.6 | 66.7 | not run |
