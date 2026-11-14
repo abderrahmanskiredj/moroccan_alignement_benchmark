@@ -1,237 +1,88 @@
 # The Moroccan Alignment Benchmark
 
+**The Moroccan Alignment Benchmark: Cultural Norms, Darija Nativeness and National Domain Knowledge in Large Language Models**  
+Accepted as a **Full Paper at ICAART 2027**, paper #171.
+
+Ferdaous Azhari\*, Abderrahman Skiredj\* (corresponding author), Ikram El Asri, Dounia Zaidouni, Ismail Berrada, and Abdeslam En-Nouaary.  
+\* Equal contribution; Ferdaous Azhari is listed first.
+
+| Author | Affiliation | Email |
+|---|---|---|
+| Ferdaous Azhari | INPT | azhari.ferdaous@doctorant.inpt.ac.ma |
+| Abderrahman Skiredj | Ministry of Artificial Intelligence, Digital Transformation, and Administrative Reform; College of Computing, UM6P | abderrahmanskiredj@hotmail.com |
+| Ikram El Asri | INPT | elasri@inpt.ac.ma |
+| Dounia Zaidouni | INPT | zaidouni@inpt.ac.ma |
+| Ismail Berrada | College of Computing, UM6P | ismail.berrada@um6p.ma |
+| Abdeslam En-Nouaary | INPT | abdeslam@inpt.ac.ma |
+
+INPT: Institut National des Postes et T?l?communications, Morocco. UM6P: Mohammed VI Polytechnic University, Morocco.
+
+Repository: https://github.com/abderrahmanskiredj/moroccan_alignement_benchmark  
+The repository is private during camera-ready preparation. Public release is planned for publication.
+
 ![Evaluation pipeline](assets/diagram.png)
 
-A Moroccan-authored, human-validated benchmark for evaluating whether large language models can **retrieve Moroccan knowledge, produce natural Moroccan Darija, and respond appropriately in Moroccan cultural, social, and institutional contexts**.
+A Moroccan-authored, human-validated benchmark for assessing locally grounded factual knowledge, natural Moroccan Darija, and appropriate cultural, social and institutional responses. ?Alignment? is an operational description of these measured capabilities, not a definition of Moroccan identity or a claim that one worldview represents all Moroccans.
 
-The benchmark contains **1,672 Arabic-script Darija items** across **8 axes**, **3 evaluation dimensions**, and **4 complementary formats**. It evaluates **17 systems** under a common generation-only protocol and releases the validation trail, model responses, scores, LLM-judge records, structured error flags, and error-analysis artifacts needed to audit or recompute the reported results.
+This README follows the revised paper. Its headline counts and results refer to the paper's final evaluation configuration. Historical and intermediate artifacts are retained for traceability; they should not be treated as interchangeable with final-rubric aggregates.
 
----
+## Benchmark structure
 
-## Benchmark at a glance
+The benchmark contains **1,672 Arabic-script Darija items** across **eight axes**, **three dimensions** and **four formats**.
 
-| Format | Purpose | Released items |
+| Format | Purpose | Items |
 |---|---|---:|
-| Multiple choice | Recognition of Moroccan knowledge and linguistic/cultural distinctions | 577 |
-| Binary acceptability | Discrimination between acceptable and unacceptable formulations/behaviours | 231 |
-| Short answer | Free recall of verifiable Moroccan knowledge | 284 |
-| Open-ended | Situated generation: factual grounding, Darija nativeness, and institutional/social alignment | 580 |
-| **Total** |  | **1,672** |
+| Multiple choice | Recognition | 577 |
+| Binary acceptability | Linguistic and pragmatic discrimination | 231 |
+| Short answer | Free recall of verifiable knowledge | 284 |
+| Open-ended | Situated generation | 580 |
+| **Total** | | **1,672** |
 
-The pre-validation pool contained **1,740 items**: 588 MCQ, 236 binary, 296 short-answer, and 620 open-ended items. After cross-validation and adjudication, **68 items were rejected**, leaving the 1,672-item released benchmark.
+The dimensions are cultural and social alignment, Darija nativeness, and national/domain knowledge. The design principle is **format follows capability**. Formats use different items, so comparisons between them are descriptive, rather than causal estimates of changing the response format.
 
-### Three evaluation dimensions
-
-1. **Cultural and social alignment**
-2. **Darija nativeness**
-3. **Moroccan national/domain knowledge**
-
-### Eight axes
-
-- Culture
-- Respect and Social Norms
-- National Identity
-- Monarchy
-- Religion
-- Nativeness
-- History
-- Geography
-
-### Released distribution
-
-| Axis | MCQ | Binary | Short answer | Open-ended | Total |
+| Axis | MCQ | Binary | Short answer | Open | Total |
 |---|---:|---:|---:|---:|---:|
-| Culture | 101 | 33 | 92 | 82 | 308 |
-| Respect and Social Norms | 72 | 40 | 0 | 67 | 179 |
+| Culture | 101 | 33 | 92 | 83 | 309 |
+| Social Norms | 72 | 40 | 0 | 67 | 179 |
 | National Identity | 70 | 62 | 72 | 71 | 275 |
 | Monarchy | 0 | 0 | 0 | 141 | 141 |
-| Religion | 0 | 0 | 0 | 96 | 96 |
+| Religion | 0 | 0 | 0 | 95 | 95 |
 | Nativeness | 95 | 95 | 0 | 123 | 313 |
 | History | 170 | 0 | 113 | 0 | 283 |
 | Geography | 69 | 1 | 7 | 0 | 77 |
 | **Total** | **577** | **231** | **284** | **580** | **1,672** |
 
----
+## Construction and validation
 
-## Design principle: format follows capability
+Thirty Moroccan annotators from different regions authored the items. Model seed drafts were permitted only with mandatory human rewriting. Factual references were source-checked; linguistic and behavioural items test concrete situations.
 
-The benchmark deliberately does not reduce Moroccan competence to a single multiple-choice score.
+Validation used blind, seeded, load-balanced assignment, separating documented items (source checking required) from tacit items (documentary lookup prohibited). The campaign yielded **2,902 scheduled validation judgements**, with senior adjudication of every escalated case. The pool of 1,740 items (588 MCQ, 236 binary, 296 short answer, 620 open) yielded 1,672 released items after 68 rejections.
 
-- **MCQ** measures recognition.
-- **Short answer** removes answer candidates and measures retrieval.
-- **Binary acceptability** probes linguistic and pragmatic discrimination.
-- **Open-ended generation** requires a response that is simultaneously useful, factually grounded, linguistically natural, and appropriate to the Moroccan context.
+Reliability is measured before adjudication. Tacit MCQ agreement is 94.7% (Krippendorff's alpha 0.928); binary agreement is 94.0% (alpha and AC1 0.881). On the 603-item complete-case open cohort, linguistic-quality agreement is 57.5% (AC1 0.403), substantially below relevance agreement of 96.0%. Adjudication addresses disagreements but does not eliminate construct subjectivity. Human-collected answer variants reduce short-answer false negatives.
 
-All evaluated systems are run under a **generation-only** setup. No log-likelihood or perplexity scoring is used.
+See [annotation policy](configs/annotation_policy.yaml), [cross-annotation records](data/01_cross_annotation/), and [validation statistics](outputs/cross_annotation_scores_and_statistics/).
 
----
+## Evaluation protocol
 
-## Human construction and validation
+Seventeen systems are evaluated zero-shot, with Arabic-script Darija prompts, no researcher-supplied system message, one generation per item, and no log-likelihood scoring. Temperature zero is requested for APIs where exposed; self-hosted models use greedy decoding with vLLM in half precision. The self-hosted tier is capped near 32B parameters and is not size matched to proprietary systems.
 
-### Item construction
+MCQ and binary prompts request an option letter. A deterministic parser tries explicit letters, verbatim option matches, then normalised matches. Accuracy is correct/all items; unparseable outputs count as incorrect, and coverage is reported separately.
 
-The items were authored by **30 Moroccan annotators from different regions**, all fluent speakers of Moroccan Darija.
+Short-answer responses use `<FINAL_ANSWER>...</FINAL_ANSWER>`. An LLM judge assesses semantic equivalence against the adjudicated reference and accepted variants. Residual API errors count as incorrect. Mistral-Saba was not in the short-answer run.
 
-Factual items were anchored in written sources whenever available. Nativeness and behavioural items were designed to capture phenomena that are poorly represented by translated benchmarks, including:
+Open-ended responses receive no appended format instruction and are scored as raw generations. See [model configuration](configs/models.yaml), [evaluation policy](configs/evaluation.yaml), and [judge prompts](prompts/judges/).
 
-- Moroccan idioms and collocations,
-- MSA overproduction,
-- French calques,
-- non-Moroccan Arabic dialect forms,
-- register mismatch,
-- literal interpretation of idiomatic expressions,
-- socially inappropriate or overly flat formulations.
+## Open-ended scoring
 
-### Blind cross-validation
+Three separately prompted passes of **one model, GLM-5.2**, evaluate:
 
-Validation used pseudonymous identifiers.
+1. Factual quality: coverage/Moroccan grounding and accuracy/hallucination control.
+2. Darija nativeness: pragmatic understanding, register, dialect consistency, loanwords and naturalness.
+3. Moroccan public-institution alignment: Monarchy, territorial integrity, religion, diversity and situational propriety/courtesy.
 
-- **MCQ, binary, and short answer:** `ANN_01` through `ANN_09`
-- **Open-ended:** `ANN_01` through `ANN_10`
+Scope exclusion clauses separate the criteria; they do not establish independent judge errors. The institutional rubric encodes an explicitly stated Moroccan public-institution perspective and can be excluded in offline re-aggregation.
 
-Assignments were blind, seeded, load-balanced, and shuffled. Validators did not receive the administrator-only answer key as a target to confirm.
-
-The validation policy distinguishes:
-
-- **documented items**, which can be checked against written evidence, and
-- **tacit items**, which depend on native linguistic or cultural judgement.
-
-For documented items, source checking was mandatory. For tacit items, documentary lookup was forbidden so that the validation measured independent native judgement rather than source retrieval.
-
-The campaign produced **2,930 human validation judgements**:
-
-| Format | Human judgements |
-|---|---:|
-| MCQ | 835 |
-| Binary | 472 |
-| Short answer | 355 |
-| Open-ended | 1,268 |
-| **Total** | **2,930** |
-
-Every escalated case was resolved by senior adjudication.
-
-The complete policy used by the released repository is in [`configs/annotation_policy.yaml`](configs/annotation_policy.yaml).
-
----
-
-## Evaluated systems
-
-The benchmark evaluates **17 systems** spanning:
-
-- general-purpose multilingual models,
-- Arabic-centric models,
-- Moroccan-Darija-adapted models,
-- proprietary API-served systems,
-- self-hosted open-weight systems.
-
-The canonical model identifiers used by the repository are defined in:
-
-```text
-configs/models.yaml
-```
-
-All 17 systems were evaluated on MCQ, binary, and open-ended generation. The short-answer run contains 16 systems because Mistral-Saba was not included in that run.
-
----
-
-## Inference protocol
-
-The common evaluation protocol is defined in [`configs/evaluation.yaml`](configs/evaluation.yaml).
-
-Core rules:
-
-- zero-shot evaluation,
-- Arabic-script Darija prompts,
-- no system prompt,
-- one generation per item,
-- greedy decoding,
-- temperature `0`,
-- generation-only evaluation for every format,
-- locally served open-weight models via vLLM in half precision,
-- no parsing or appended output instruction for open-ended items.
-
-### Output contracts
-
-**MCQ and binary**
-
-Models are asked to return a single option letter. Evaluation nevertheless uses a deterministic cascading parser so that recoverable formatting variation does not become an arbitrary scoring error.
-
-**Short answer**
-
-The final answer is extracted from:
-
-```text
-<FINAL_ANSWER>...</FINAL_ANSWER>
-```
-
-The extracted span is graded for **semantic correctness**, not exact string identity, against the final adjudicated reference and the accepted answer variants collected during validation.
-
-**Open-ended**
-
-The raw generation is scored directly. No answer-format instruction is appended and no parser is applied.
-
----
-
-## Scoring
-
-### MCQ and binary
-
-The primary metric is **strict accuracy**:
-
-```text
-correct / all items
-```
-
-Unparseable answers count as incorrect. Coverage is reported separately.
-
-The parser applies, in order:
-
-1. explicit option-letter extraction,
-2. verbatim option-string matching,
-3. normalized option matching.
-
-### Short answer
-
-A dedicated LLM-as-judge scoring pipeline determines whether the extracted answer is semantically equivalent to the adjudicated reference or one of its accepted variants.
-
-Transport/API failures are conservatively counted as incorrect.
-
-### Open-ended generation
-
-Open-ended responses are independently evaluated by three **disjoint** judges:
-
-1. **Moroccan domain knowledge and factual quality**
-   - factual coverage and Moroccan grounding
-   - factual accuracy and hallucination control
-
-2. **Moroccan Darija nativeness**
-   - Darija/pragmatic understanding
-   - language and register mirroring
-   - dialect consistency
-   - loanwords and code-switching
-   - lexical, idiomatic, and stylistic naturalness
-
-3. **Moroccan public-institution alignment**
-   - Monarchy / Royal Institution
-   - territorial integrity
-   - religion and the official religious framework
-   - Moroccan diversity and stereotypes
-   - `sswab`, `adab`, dignity, and socially appropriate conflict handling
-
-The prompts are released in:
-
-```text
-prompts/judges/
-├── MOROCCAN DARIJA NATIVENESS JUDGE.md
-├── MOROCCAN DOMAIN KNOWLEDGE AND FACTUAL QUALITY JUDGE.md
-└── moroccan_public_institution_alignment_judge_v3.md
-```
-
-All three open-ended judges use **GLM-5.2** at temperature `0`.
-
-### Open-ended label scale
-
-| Label | Numeric value |
+| Label | Offline score |
 |---|---:|
 | Excellent | 4 |
 | Acceptable | 3 |
@@ -239,269 +90,139 @@ All three open-ended judges use **GLM-5.2** at temperature `0`.
 | Severe | 1 |
 | Fail | 0 |
 
-Each judge returns categorical sub-rubric decisions and structured error flags. The judge-level final label is the **worst applicable sub-rubric label**.
+Judges emit categorical labels and tagged severity flags, rather than numbers. A dimension score is the minimum over its applicable sub-rubrics. For each response:
 
-For item \(i\) and model \(m\):
+- **Strict:** minimum of the three dimension scores, then averaged over the 580 items.
+- **Soft:** mean of the three dimension scores, then averaged over items.
+- **Joint-pass:** percentage of responses with all three dimension scores at least 3 (`Acceptable`).
+- **Fail:** percentage with at least one dimension scored 0 (`Fail`).
 
-- **Strict score:** minimum of nativeness, factual, and alignment scores
-- **Soft score:** mean of the three dimension scores
-- **Deployable rate:** proportion of responses with all three dimensions at least `Acceptable`
-- **Fail rate:** proportion receiving `Fail` from at least one judge
+The final paper reports **9,860 responses**, **29,580 categorical judge decisions**, and **47,200 structured error flags**. Released records support offline alternative aggregation without new model inference.
 
-“Deployable” is only the benchmark name for simultaneous passage of these three measured gates; it is **not** a certification of production safety or deployment readiness.
+## Results reported in the paper
 
-For the 580 open-ended items and 17 systems, the release contains:
+### Verifiable formats
 
-- **9,860 model responses**
-- **29,580 judge decisions**
-- **48,857 structured error flags**
+Strict accuracy (%); active parameters are shown for mixture-of-experts models.
 
-Because categorical judgements and individual flags are released, alternative aggregations can be recomputed without re-running model inference.
+| System | Parameters | MCQ | Binary | Short answer |
+|---|---|---:|---:|---:|
+| Gemini 3.6 Flash | -- | 97.2 | 93.1 | 95.8 |
+| GPT-5 | -- | 95.7 | 91.3 | 94.7 |
+| Claude Sonnet 5 | -- | 92.5 | 85.7 | 85.6 |
+| Grok 4.20 | -- | 87.2 | 68.4 | 69.4 |
+| gemma-4-31b-it | 31B | 93.6 | 89.6 | 78.2 |
+| gemma-4-26b-a4b-it | 26B/4B | 92.2 | 86.1 | 75.0 |
+| aya-expanse-32b | 32B | 82.0 | 75.8 | 62.3 |
+| command-r-08-2024 | 32B | 82.1 | 75.8 | 58.5 |
+| ALLaM-7B-Instruct | 7B | 79.5 | 77.5 | 52.5 |
+| GemMaroc-27b-it | 27B | 82.7 | 80.1 | 43.7 |
+| Atlas-Chat-27B | 27B | 77.8 | 79.2 | 42.3 |
+| Qwen3.6-27B | 27B | 80.2 | 78.4 | 38.7 |
+| Jais-2-8B-Chat | 8B | 79.2 | 73.6 | 43.3 |
+| gpt-oss-20b | 20B | 78.0 | 70.1 | 36.6 |
+| mistral-small-3.2-24b | 24B | 69.5 | 65.4 | 40.5 |
+| Qwen3.5-9B | 9B | 75.7 | 69.7 | 26.1 |
+| Mistral-Saba | 24B | 80.6 | 66.7 | not run |
 
----
+The cross-system range is 27.7 points for MCQ and 69.7 for short answer. The different item inventories preclude attributing this difference solely to response format.
 
-## Repository structure
+### Open-ended generation
 
-The repository preserves both the final benchmark and the intermediate validation/evaluation artifacts.
+Scores are out of 4; Joint and Fail are percentages. These are automated rubric statistics, not human acceptance rates or deployment certifications.
 
-```text
-.
-├── README.md
-├── requirements.txt
-├── .gitattributes
-├── .gitignore
-│
-├── assets/
-│   └── diagram.png
-│
-├── configs/
-│   ├── annotation_policy.yaml
-│   ├── evaluation.yaml
-│   └── models.yaml
-│
-├── data/
-│   ├── 00_prevalidation/
-│   │   └── items_prevalidation.xlsx
-│   │
-│   ├── 01_cross_annotation/
-│   │   ├── Binary questions/
-│   │   │   ├── admin/
-│   │   │   ├── annotateurs/
-│   │   │   ├── annotator_deliverables/
-│   │   │   └── binary_consolidation/
-│   │   ├── MCQ/
-│   │   │   ├── admin/
-│   │   │   ├── annotateurs/
-│   │   │   ├── annotator_deliverables/
-│   │   │   └── mcq_consolidation/
-│   │   ├── Open questions/
-│   │   │   ├── admin/
-│   │   │   ├── annotateurs/
-│   │   │   └── annotator_deliverables/
-│   │   └── Short answers/
-│   │       ├── admin/
-│   │       ├── annotateurs/
-│   │       ├── annotator_deliverables/
-│   │       └── short_answers_consolidation/
-│   │
-│   └── 02_final_benchmark/
-│       ├── final_binary_no_responses.xlsx
-│       ├── final_shorts_no_responses.xlsx
-│       ├── open_question_final_no_responses.xlsx
-│       └── qcm_final_no_responses.xlsx
-│
-├── outputs/
-│   ├── final_binary_scores.xlsx
-│   ├── final_short_answers_scores_llm_judge.xlsx
-│   ├── open_questions_final_scores.xlsx
-│   ├── qcm_final_scores.xlsx
-│   ├── cross_annotation_scores_and_statistics/
-│   ├── glm52_judge_outputs/
-│   │   ├── eval_report.xlsx
-│   │   ├── flags.jsonl
-│   │   └── judgments.jsonl
-│   └── model_responses/
-│       ├── final_binary_with_responses.xlsx
-│       ├── open_question_final_with_responses.xlsx
-│       ├── qcm_final_with_responses.xlsx
-│       └── short_answers_final_with_responses.xlsx
-│
-├── prompts/
-│   └── judges/
-│
-├── scripts/
-│   ├── 01_create_annotation_splits/
-│   ├── 02_merging_annotations/
-│   ├── 03_run_inference/
-│   ├── 04_scoring/
-│   └── 08_prepare_error_analysis.py
-│
-└── error_analysis/
-    ├── open_questions_error_analysis/
-    │   ├── figures/
-    │   ├── 00_README.csv
-    │   ├── 01_reconciliation.csv
-    │   ├── 02_leaderboard.csv
-    │   ├── 03_top5.csv
-    │   ├── 04_item_hardness.csv
-    │   ├── 05_hard_summary.csv
-    │   ├── 06_enrichment.csv
-    │   ├── 07_FN_by_model.csv
-    │   ├── 08_FN_global.csv
-    │   ├── 09_sub_global.csv
-    │   ├── 10_sub_by_model.csv
-    │   ├── 11_tags_global.csv
-    │   ├── 12_tags_by_model.csv
-    │   ├── 13_diff_summary.csv
-    │   ├── 14_spearman.csv
-    │   └── open_error_analysis.xlsx
-    └── qcm_binary_shorts_error_analysis/
-        ├── figures/
-        ├── closed_formats_long.csv
-        ├── error_analysis_results.xlsx
-        ├── ERROR_ANALYSIS_SUMMARY.md
-        ├── hard_item_enrichment.csv
-        ├── item_metrics.csv
-        └── model_sets.json
+| System | Strict | Soft | Joint | Fail | Nativeness | Factual | Institutional |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| GPT-5 | 2.555 | 3.366 | 43.6 | 1.0 | 3.219 | 3.091 | 3.788 |
+| Gemini 3.6 Flash | 2.284 | 3.168 | 28.8 | 1.7 | 2.947 | 2.840 | 3.719 |
+| Claude Sonnet 5 | 2.281 | 3.151 | 29.0 | 2.1 | 2.971 | 2.678 | 3.805 |
+| gemma-4-31b-it | 2.172 | 3.133 | 22.1 | 1.7 | 2.793 | 2.834 | 3.771 |
+| gemma-4-26b-a4b-it | 2.107 | 3.078 | 20.5 | 3.4 | 2.748 | 2.733 | 3.753 |
+| Grok 4.20 | 1.971 | 2.875 | 15.3 | 4.8 | 2.667 | 2.436 | 3.521 |
+| GemMaroc-27b | 1.833 | 2.832 | 16.7 | 5.9 | 2.745 | 2.188 | 3.562 |
+| Jais-2-8B | 1.624 | 2.660 | 9.8 | 7.6 | 2.252 | 2.171 | 3.557 |
+| ALLaM-7B | 1.512 | 2.580 | 7.1 | 5.0 | 1.940 | 2.141 | 3.659 |
+| Atlas-Chat-27B | 1.510 | 2.636 | 10.9 | 9.7 | 2.360 | 2.033 | 3.514 |
+| Mistral-Saba | 1.479 | 2.464 | 3.8 | 10.9 | 1.850 | 2.091 | 3.452 |
+| Aya-Expanse-32B | 1.445 | 2.533 | 1.2 | 5.3 | 1.631 | 2.298 | 3.671 |
+| Qwen3.6-27B | 1.436 | 2.515 | 1.2 | 8.3 | 1.616 | 2.252 | 3.678 |
+| Mistral-Small-24B | 1.248 | 2.284 | 2.2 | 19.1 | 1.593 | 1.902 | 3.357 |
+| gpt-oss-20b | 1.116 | 2.224 | 1.2 | 21.6 | 1.419 | 1.862 | 3.390 |
+| Command-R | 1.071 | 2.353 | 1.9 | 7.4 | 1.140 | 2.303 | 3.616 |
+| Qwen3.5-9B | 0.410 | 1.668 | 0.0 | 60.3 | 0.476 | 1.324 | 3.205 |
+
+The strongest system's joint-pass rate is 43.6%; the best self-hosted system reaches 22.1%. Across all systems, factual coverage/Moroccan grounding averages 2.049/4 against 2.504 for accuracy/hallucination control. Pragmatic understanding averages 3.375 against lexical/idiomatic/stylistic naturalness of 2.500. These rubric decompositions distinguish omissions and unnatural production from other errors.
+
+### Minimal camera-ready diagnostics from existing records
+
+No new experiments or annotations were added for these diagnostics.
+
+The binary gold classes contain 115 acceptable and 116 not-acceptable items. Class-conditioned accuracies and their unweighted mean (BA, balanced accuracy) reveal response asymmetry:
+
+| System | Acceptable | Not acceptable | BA |
+|---|---:|---:|---:|
+| Gemini 3.6 Flash | 96.5 | 89.7 | 93.1 |
+| GPT-5 | 94.8 | 87.9 | 91.4 |
+| gemma-4-31b-it | 96.5 | 82.8 | 89.6 |
+| gemma-4-26b-a4b-it | 96.5 | 75.9 | 86.2 |
+| Claude Sonnet 5 | 96.5 | 75.0 | 85.8 |
+| GemMaroc-27b | 100.0 | 60.3 | 80.2 |
+| Atlas-Chat-27B | 96.5 | 62.1 | 79.3 |
+| Qwen3.6-27B | 83.5 | 73.3 | 78.4 |
+| ALLaM-7B | 90.4 | 64.7 | 77.5 |
+| Aya-Expanse-32B | 98.3 | 53.4 | 75.9 |
+| Command-R | 98.3 | 53.4 | 75.9 |
+| Jais-2-8B | 96.5 | 50.9 | 73.7 |
+| gpt-oss-20b | 62.6 | 77.6 | 70.1 |
+| Qwen3.5-9B | 76.5 | 62.9 | 69.7 |
+| Grok 4.20 | 44.3 | 92.2 | 68.3 |
+| Mistral-Saba | 95.7 | 37.9 | 66.8 |
+| Mistral-Small-24B | 96.5 | 34.5 | 65.5 |
+
+Balanced and ordinary binary accuracy differ by at most 0.14 percentage points; prevalence reweighting does not repair response bias.
+
+## Judge audits and uncertainty
+
+The existing 100-response blinded, dual-reviewed open audit is axis-proportional and balanced across the 17 systems. Human-human quadratic-weighted kappa is 0.874/0.753/0.783 for factuality/nativeness/institutional alignment; judge-human kappa is 0.681/0.624/0.755.
+
+At the joint-pass boundary, TP=10, TN=76, FP=3, FN=11: 86% agreement, but only 13 automated passes against 21 human passes. Precision is **76.9%** and sensitivity **47.6%** on this audit. This rules out reading automated joint-pass rates as direct human acceptance estimates. The sample does not support judge-accuracy estimates for individual systems or axes.
+
+The separate short-answer audit samples 25 judge-accepted and 25 judge-rejected responses. Agreement is 48/50, with 24/25 correct in each stratum (Cohen's kappa 0.92). Reweighting the two stratum agreement estimates to a population judge-acceptance prevalence q gives `q*(24/25)+(1-q)*(24/25)=0.96`. This point estimate remains subject to sampling uncertainty and does not establish population sensitivity or specificity.
+
+No second judge family, repeated-generation study, prompt-sensitivity study, or full-benchmark human performance ceiling is reported. Item-based uncertainty bounds exclude judge error and sampling variability from model generation. Scores should support coarse capability profiles rather than a precise total ordering.
+
+## Finding and recomputing artifacts
+
+| Artifact | Location |
+|---|---|
+| Response-free benchmark | [data/02_final_benchmark](data/02_final_benchmark/) |
+| Annotation and adjudication trail | [data/01_cross_annotation](data/01_cross_annotation/) |
+| Model responses | [outputs/model_responses](outputs/model_responses/) |
+| Verifiable and open score workbooks | [outputs](outputs/) |
+| Human validation statistics | [outputs/cross_annotation_scores_and_statistics](outputs/cross_annotation_scores_and_statistics/) |
+| Categorical judge records and flags | [outputs/glm52_judge_outputs](outputs/glm52_judge_outputs/) |
+| Closed and open error analyses | [error_analysis](error_analysis/) |
+| Judge prompts | [prompts/judges](prompts/judges/) |
+| Model/evaluation/annotation policies | [configs](configs/) |
+
+Pipeline scripts cover [annotation splits](scripts/01_create_annotation_splits/), [consolidation](scripts/02_merging_annotations/), [inference](scripts/03_run_inference/), [scoring](scripts/04_scoring/), [human audits](scripts/05_human_audits/), and [error analysis](scripts/08_prepare_error_analysis.py). Alternative aggregations can use saved responses and judgements; reproducing original API outputs also depends on provider snapshots and complete run metadata.
+
+## Limitations and intended use
+
+Arabic-script Darija does not cover MSA, Amazigh, French, Arabizi, code-switching or the full range of Moroccan variation. Some cells are small (including n=7), and open-item difficulty/intent metadata are missing for 35.5%/40.9%, concentrated on Monarchy and Religion. Provenance/attestation effects are inconclusive and confounded with axis. All three open rubric passes share one judge family. Label-to-number mapping assumes equal spacing, so categorical and threshold-based analyses remain relevant.
+
+The benchmark is for diagnostic model evaluation. It must not be used to profile people, assess whether someone is ?Moroccan enough?, or make automated decisions about individuals. It does not certify general safety or deployment readiness. Regional and social variation are not inherently errors; the rubrics are explicit operational criteria, not a definition of Moroccan identity.
+
+## Citation
+
+The paper is accepted at ICAART 2027. Proceedings metadata and a DOI will be added when available; none is claimed here.
+
+```bibtex
+@inproceedings{azhari2027moroccan,
+  title = {The Moroccan Alignment Benchmark: Cultural Norms, Darija Nativeness and National Domain Knowledge in Large Language Models},
+  author = {Azhari, Ferdaous and Skiredj, Abderrahman and El Asri, Ikram and Zaidouni, Dounia and Berrada, Ismail and En-Nouaary, Abdeslam},
+  booktitle = {Proceedings of the 19th International Conference on Agents and Artificial Intelligence (ICAART)},
+  year = {2027},
+  note = {Accepted full paper; Ferdaous Azhari and Abderrahman Skiredj contributed equally}
+}
 ```
-
----
-
-## Where to find the main release artifacts
-
-### Response-free benchmark
-
-```text
-data/02_final_benchmark/
-```
-
-These files contain the released benchmark items without evaluated-model responses.
-
-### Model generations
-
-```text
-outputs/model_responses/
-```
-
-These workbooks pair the benchmark items with the responses generated by the evaluated systems.
-
-### Final scores
-
-```text
-outputs/
-```
-
-- `qcm_final_scores.xlsx`
-- `final_binary_scores.xlsx`
-- `final_short_answers_scores_llm_judge.xlsx`
-- `open_questions_final_scores.xlsx`
-
-### Human validation statistics
-
-```text
-outputs/cross_annotation_scores_and_statistics/
-```
-
-This directory contains the released validation/reliability workbooks for all four formats.
-
-### Open-ended judge records
-
-```text
-outputs/glm52_judge_outputs/
-```
-
-- `judgments.jsonl` — structured categorical judge records
-- `flags.jsonl` — structured error flags
-- `eval_report.xlsx` — aggregated judge/evaluation report
-
-### Error analysis
-
-```text
-error_analysis/
-```
-
-The repository includes both:
-
-- closed-format hardness/discrimination analysis, and
-- open-ended factual/nativeness/alignment decomposition with per-model and global error-tag summaries.
-
----
-
-## Reproducing the pipeline
-
-The repository exposes the implemented stages rather than a single opaque evaluation command.
-
-### 1. Create annotation splits
-
-```text
-scripts/01_create_annotation_splits/
-```
-
-Contains separate splitters for MCQ, binary, short-answer, and open-ended validation.
-
-### 2. Merge, consolidate, and adjudicate annotations
-
-```text
-scripts/02_merging_annotations/
-```
-
-Contains consolidation scripts and the notebooks used to compute cross-validation statistics.
-
-### 3. Run model inference
-
-```text
-scripts/03_run_inference/
-```
-
-Contains the four format-specific inference notebooks and the vLLM serving/evaluation script.
-
-### 4. Score the benchmark
-
-```text
-scripts/04_scoring/
-```
-
-Contains:
-
-- deterministic MCQ scoring,
-- deterministic binary scoring,
-- LLM-as-judge short-answer scoring,
-- GLM-5.2 open-ended rubric judging.
-
-### 5. Reproduce the error analysis
-
-```text
-scripts/08_prepare_error_analysis.py
-error_analysis/
-```
-
----
-
-## Interpretation and intended use
-
-This benchmark is intended for:
-
-- language-model evaluation,
-- analysis of Moroccan factual and cultural grounding,
-- Darija nativeness evaluation,
-- diagnosis of failure modes in Moroccan-facing assistants,
-- comparison of recognition, retrieval, discrimination, and situated generation.
-
-It is **not** intended to:
-
-- profile individuals,
-- decide whether a person is “Moroccan enough,”
-- assess an individual's cultural authenticity,
-- make automated decisions about people,
-- certify a model as generally safe or production-ready,
-- replace domain-specific evaluation for medical, cybersecurity, privacy, self-harm, illegal-activity, or other deployment risks.
-
-Morocco is regionally, socially, generationally, linguistically, and culturally diverse. The benchmark operationalizes explicit evaluation criteria; it does not claim that one response, dialectal realization, or social behaviour is the only valid Moroccan one.
-
----
-
-## Reproducibility note
-
-The release includes the response-free benchmark, cross-annotation artifacts, adjudicated/final consolidations, validation statistics, model configurations, evaluation policy, annotation policy, judge prompts, inference notebooks, scoring scripts, model responses, judge records, error flags, and error-analysis outputs.
-
-This allows the reported aggregate metrics—and alternative open-ended aggregations—to be audited from released artifacts without re-running the evaluated models.
