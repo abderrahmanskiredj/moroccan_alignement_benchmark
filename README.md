@@ -1,5 +1,23 @@
 # The Moroccan Alignment Benchmark
 
+## Download datasets on Hugging Face
+
+**1. Benchmark with model responses**
+
+[https://huggingface.co/datasets/AzhariFerdaous/moroccan_alignement_benchmark](https://huggingface.co/datasets/AzhariFerdaous/moroccan_alignement_benchmark)
+
+The 1,672-item benchmark with model answers: MCQ (577), binary (231), short answer (284), and open-ended (580), each provided as a test split.
+
+**2. Evaluation scores and detailed results**
+
+[https://huggingface.co/datasets/AzhariFerdaous/moroccan_alignement_benchmark_scores](https://huggingface.co/datasets/AzhariFerdaous/moroccan_alignement_benchmark_scores)
+
+Leaderboards, detailed verdicts, rubric breakdowns, and error summaries. Aggregate scores cover all evaluated models; open-ended item-level judgements in this Hugging Face release cover GPT-5.
+
+Both repositories include documentation, Python loading examples, Parquet tables, original Excel files, and CSV exports.
+
+---
+
 **The Moroccan Alignment Benchmark: Cultural Norms, Darija Nativeness and National Domain Knowledge in Large Language Models**  
 Accepted as a **Full Paper at ICAART 2027**, paper #171.
 
